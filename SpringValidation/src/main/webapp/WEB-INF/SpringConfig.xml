@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- to enable all annotation in the context  -->
+	<context:annotation-config/>
+	
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+	
+	<!-- enables all the classes to create objects -->
+	<context:component-scan base-package="com.clust" />
+
+	<!-- used to specify the views in jsp folder with .jsp extention-->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/jsp/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	
+	<beans:bean id="employeeValidator" class="com.clust.validation.EmployeeFormValidator" />
+	   
+	   <!-- used to map the properties file to display msgs  -->
+	 <beans:bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource" >
+	    <beans:property name="basename" value="classpath:message" />
+	    </beans:bean>
+	    
+	    <!-- enables the  validation tags like notnull,max,min,.etc -->
+	<beans:bean id="validator"
+      class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
+	<annotation-driven></annotation-driven>
+	
+	
+
+	
+</beans:beans>
