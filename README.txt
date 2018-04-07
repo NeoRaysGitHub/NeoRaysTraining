@@ -1,2 +1,4 @@
-RaviKumar S Hadagali.
-NeoRays Software Solutions Private Limited.
+Dinesh Pranav
+
+
+NeoRays Software Solution Pvt Ltd.
