@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>expressionlang</display-name>
+  <welcome-file-list>
+    <welcome-file>Enter.html</welcome-file>
+    <welcome-file>Login1.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>bhima</servlet-name>
+    <servlet-class>com.neo.el.Elexample</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>bhima</servlet-name>
+    <url-pattern>/ji</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>bhimarao</servlet-name>
+    <servlet-class>com.neo.cook.CookieServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>bhimarao</servlet-name>
+    <url-pattern>/jirao</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>bhimaraoraj</servlet-name>
+    <servlet-class>com.neo.attribute.SetAttribute</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>bhimaraoraj</servlet-name>
+    <url-pattern>/jiraoraj</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>studentid</servlet-name>
+    <servlet-class>com.neo.student.StudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>studentid</servlet-name>
+    <url-pattern>/student</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+    <param-name>country</param-name>
+    <param-value>INDIA</param-value>
+  </context-param>
+</web-app>
