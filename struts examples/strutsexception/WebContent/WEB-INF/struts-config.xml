@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "struts-config_1_2.dtd">
+<struts-config>
+
+	<form-beans>
+		<form-bean name="GlobalcolorForm" type="com.cluster.form.GlobalcolorForm"/>
+		<form-bean name="LocalcolorForm" type="com.cluster.form.LocalcolorForm"/>
+	</form-beans>
+	
+	 <global-exceptions>
+        <exception key="red" type="java.lang.ArithmeticException" path="/jsp/red.jsp"/>
+        <exception key="blue" type="java.lang.ArrayIndexOutOfBoundsException" path="/jsp/blue.jsp"/>
+		<exception key="green" type="java.lang.NumberFormatException" path="/jsp/green.jsp"/>
+       	<exception key="user" type="com.cluster.exception.UserdefinedException" path="user.jsp"/>
+    </global-exceptions>
+	
+	<action-mappings> 
+		<action path="/global" type="com.cluster.action.GlobalcolorAction" name="GlobalcolorForm">
+		<forward name="invalid" path="/jsp/invalid.jsp"/>
+		</action> 
+							
+		<action path="/local" type="com.cluster.action.LocalcolorAction" name="LocalcolorForm">
+		<forward name="invalid" path="/jsp/invalid.jsp"/>	
+        	<exception key="orange" type="java.lang.ArithmeticException" path="/jsp/orange.jsp"/> 
+        	
+        </action>
+	</action-mappings> 
+	
+	 <message-resources parameter="myapp.ApplicationResources"/>
+	 
+</struts-config> 

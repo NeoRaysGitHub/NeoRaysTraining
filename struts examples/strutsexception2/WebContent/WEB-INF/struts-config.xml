@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "struts-config_1_2.dtd">
+<struts-config>
+
+	<form-beans>
+	<form-bean name="studentform" type="com.cluster.form.StudentForm"/>
+	</form-beans>
+	<globalExceptions>
+	<exception key="red" type="java.lang.ArithmeticException" path="/jsp/red.jsp"/>
+	</globalExceptions>
+	
+	<action-mappings>
+	<action path="/login" type="com.cluster.action.ShowPhoneAction" name="studentform">
+	<exception key="errors.search.phone.noresults" type="com.cluster.exception.PhoneNumberNotFoundException" path="/jsp/showphonenumber.jsp"/>
+	</action>
+	
+	</action-mappings>
+	 <message-resources parameter="myapp.ApplicationResources"/>
+	 
+</struts-config> 
