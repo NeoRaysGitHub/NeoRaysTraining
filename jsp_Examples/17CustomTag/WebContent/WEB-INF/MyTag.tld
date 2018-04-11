@@ -1,0 +1,9 @@
+<taglib>
+<tlib-vesion>1.2</tlib-vesion>
+<jsp-versio>2.0</jsp-versio>
+<tag>
+<name>test</name>
+<tag-class>com.neorays.TestTagHandler</tag-class>
+<body-content>jsp</body-content>
+</tag>
+</taglib>
