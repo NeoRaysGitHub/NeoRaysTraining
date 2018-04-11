@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "struts-config_1_2.dtd">
+<struts-config>
+
+	<form-beans>
+		<form-bean name="loginForm" type="com.neorays.form.LoginForm"/>
+		<form-bean name="signupForm" type="com.neorays.form.SignupForm"/>
+	</form-beans>
+	
+	<action-mappings> 
+	
+		
+		<action path="/signup" type="org.apache.struts.actions.ForwardAction" parameter="/jsp/signup.jsp"/>
+		
+		<action path="/login" type="org.apache.struts.actions.ForwardAction" parameter="/jsp/login.jsp"/>
+
+	
+		<action path="/login" type="com.neorays.action.LoginAction" name="loginForm" 
+			 validate="true" input="/jsp/login.jsp">
+			<forward name="success" path="/jsp/success.jsp" />
+			<forward name="error" path="/jsp/error.jsp" />
+		</action>
+		<action path="/signup" type="com.neorays.action.SignupAction" name="signupForm" 
+			 validate="true" input="/jsp/signup.jsp">
+			<forward name="success" path="/jsp/success.jsp" />
+			<forward name="error" path="/jsp/error.jsp" />
+		</action>
+		
+		
+	</action-mappings> 
+	 <message-resources parameter="myapp.ApplicationResources"/>
+	 
+	 <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validator-rules.xml, /WEB-INF/validator.xml" />
+	</plug-in>
+
+</struts-config> 
