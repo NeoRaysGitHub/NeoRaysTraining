@@ -1,0 +1,15 @@
+<!DOCTYPE struts-config PUBLIC
+       "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+       "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+<form-beans>
+<form-bean name="employeeForm" type="com.neo.form.EmployeeForm"></form-bean>
+</form-beans>
+ <action-mappings>
+ <action path="/employee" name="employeeForm" type="com.neo.action.EmployeeAction" parameter="submit" >
+ <forward name="Success" path="/WEB-INF/jsp/success.jsp"></forward>
+ <forward name="Failure" path="/WEB-INF/jsp/failure.jsp"></forward>
+ </action>
+ </action-mappings>
+ <message-resources parameter="com/neo/resources/Message"></message-resources>
+</struts-config>       
