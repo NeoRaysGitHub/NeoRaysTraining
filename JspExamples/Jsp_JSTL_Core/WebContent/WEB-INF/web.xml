@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Jsp_JSTL_Core</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  <servlet-name>core</servlet-name>
+  <jsp-file>/WEB-INF/jsp/set_out_remove.jsp</jsp-file>
+  </servlet>
+  <servlet>
+  <servlet-name>if</servlet-name>
+  <jsp-file>/WEB-INF/jsp/if.jsp</jsp-file>
+  </servlet>
+   <servlet>
+  <servlet-name>choose</servlet-name>
+  <jsp-file>/WEB-INF/jsp/choose.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>choose</servlet-name>
+  <url-pattern>/choose.jsp</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  <servlet-name>if</servlet-name>
+  <url-pattern>/if.jsp</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  <servlet-name>core</servlet-name>
+  <url-pattern>/set_out_remove.jsp</url-pattern>
+  </servlet-mapping>
+</web-app>

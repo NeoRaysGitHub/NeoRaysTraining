@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Jsp_El_Implicity</display-name>
+   <servlet> 
+   <servlet-name>init</servlet-name>
+   <jsp-file>/WEB-INF/jsp/intiParam.jsp</jsp-file>
+    <init-param>
+     <param-name>Driver_Name</param-name>
+     <param-value>oracle.jdbc.OracleDriver</param-value>
+    </init-param>
+    <init-param>
+     <param-name>Url</param-name>
+     <param-value>jdbc:oracle:thin:@localhost:1521:xe</param-value>
+    </init-param>
+    <init-param>
+     <param-name>username</param-name>
+     <param-value>suresh</param-value>
+    </init-param>
+     <init-param>
+      <param-name>password</param-name>
+      <param-value>suresh</param-value>
+     </init-param>
+   </servlet>
+  
+  <servlet>
+  <servlet-name>requestScope</servlet-name>
+  <jsp-file>/WEB-INF/jsp/requestScope.jsp</jsp-file>  
+  </servlet>
+  
+  <servlet>
+  <servlet-name>sessionScope</servlet-name>
+  <jsp-file>/WEB-INF/jsp/session.jsp</jsp-file>
+  </servlet>
+  
+  <servlet>
+  <servlet-name>applicationScope</servlet-name>
+  <jsp-file>/WEB-INF/jsp/application.jsp</jsp-file>
+  </servlet>
+  
+   <servlet>
+  <servlet-name>param</servlet-name>
+  <jsp-file>/WEB-INF/jsp/param.jsp</jsp-file>
+  </servlet>
+  
+   <servlet-mapping>
+  <servlet-name>init</servlet-name>
+  <url-pattern>/initParam.jsp</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+  <servlet-name>param</servlet-name>
+  <url-pattern>/param.jsp</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  <servlet-name>applicationScope</servlet-name>
+  <url-pattern>/application.jsp</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  <servlet-name>requestScope</servlet-name>
+  <url-pattern>/requestScope.jsp</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  <servlet-name>sessionScope</servlet-name>
+  <url-pattern>/sessionScope.jsp</url-pattern>
+  </servlet-mapping>
+</web-app>

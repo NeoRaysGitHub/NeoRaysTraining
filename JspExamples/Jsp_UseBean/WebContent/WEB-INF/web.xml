@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Jsp_UseBean</display-name>
+  <welcome-file-list>
+   <welcome-file>student.html</welcome-file>
+  </welcome-file-list>
+     <servlet>
+    <servlet-name>bean</servlet-name>
+    <jsp-file>/WEB-INF/jsp/student.jsp</jsp-file>
+   </servlet>
+   <servlet-mapping>
+   <servlet-name>bean</servlet-name>
+   <url-pattern>/student.jsp</url-pattern>
+   </servlet-mapping>
+</web-app>
