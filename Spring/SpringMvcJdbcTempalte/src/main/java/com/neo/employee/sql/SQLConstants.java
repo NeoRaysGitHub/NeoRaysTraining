@@ -1,0 +1,7 @@
+package com.neo.employee.sql;
+
+public class SQLConstants {
+ static final String SQL_GET_EMPLOYEE_BY_ID = "SELECT ENAME,JOB,SAL,DEPTNO FROM EMP WHERE EMPNO = ?";
+ static final String SQL_GET_ALL_EMPLOYEES = "SELECT EMPNO,ENAME,JOB,SAL,DEPTNO FROM EMP";
+ static final String SQL_GET_ALL_EMPLOYEES_BY_DEPTNO = "SELECT EMPNO,ENAME,JOB,SAL,DEPTNO FROM EMP WHERE DEPTNO = ?";
+}
