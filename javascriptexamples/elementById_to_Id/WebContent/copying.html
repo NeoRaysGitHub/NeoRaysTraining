@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p id="intro">Getting one id to other id</p>
+<p>Hello welcome to Neo Rays</p>
+<p>Successfully executed</p>
+<h1>hiii</h1>
+
+<p id="id">how are you?</p>  <!-- overriding by "intro" id value -->
+
+<script type="text/javascript">
+var stored=document.getElementById("intro");
+document.getElementById("id").innerHTML=
+	"This is selected from Tag Name :"+stored.innerHTML+" "+stored.length;
+	</script>
+</body>
+</html>

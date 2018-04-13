@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script>
+
+
+function total()
+{
+	var ch=f1.courses.selectedIndex;
+	if(ch==0)
+	f1.tfee.value="";
+	if(ch==1)
+	f1.tfee.value=18800;
+	if(ch==2)
+	f1.tfee.value=15000;
+	if(ch==3)
+	f1.tfee.value=4000;
+}
+
+function conc(i)
+{
+	if(i==1)
+		f1.cfee.value=500;
+	if(i==2)
+		f1.cfee.value=200;
+	if(i==3)
+		f1.cfee.value=700;
+	if(i==4)
+		f1.cfee.value=600;
+}
+
+function due()
+{
+	var total=parseInt(f1.tfee.value);
+	var discount=parseInt(f1.cfee.value);
+	var paid=parseInt(f1.pfee.value);
+	var due=total-(discount+paid);
+
+	if(due>=0)
+		f1.dfee.value=total-(discount+paid);
+
+}
+</script>
+</head>
+<body>
+<form name="f1">
+<table>
+
+<tr>
+<td>course</td>
+<td><select name="courses" onchange="total();">
+<option>--courses--
+<option>Java
+<option>.Net
+<option>sql
+</select> </td>
+</tr>
+
+<tr>
+<td>Total Fees</td>
+<td><input type="text" name="tfee" readonly/></td>
+</tr>
+
+<tr>
+<td>caste</td>
+<td><input type="radio" name="r1" onclick="conc(1);" readonly>OC
+<input type="radio" name="r1" onclick="conc(2);" readonly>OBC
+<input type="radio" name="r1" onclick="conc(3);" readonly>SC
+<input type="radio" name="r1" onclick="conc(4);" readonly>ST
+</td>
+</tr>
+
+<tr>
+<td>Concession Fees</td>
+<td><input type="text" name="cfee" readonly/></td>
+</tr>
+
+<tr>
+<td>Paid Fees</td>
+<td><input type="text" name="pfee"/></td>
+</tr>
+
+<tr>
+<td>Due Fees</td>
+<td><input type="text" name="dfee" readonly/></td>
+</tr>
+
+<tr>
+<td colspan=2 align=center>
+<input type="button" name="b1" value="calculate" onclick="due();"/>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

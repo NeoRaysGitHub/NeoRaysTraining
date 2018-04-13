@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p>setting value to an undefined parameter</p>
+<p id="demo">it is overriding by answer</p>
+
+<script type="text/javascript">
+function myFunction(a,b)
+{
+	if(b === undefined)
+		{
+			b = 0;
+		}
+	return a*b;
+}
+	document.getElementById("demo").innerHTML=myFunction(5);//it is overriding the paragraph content which is in id.
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+var sname=prompt("Enter Student Name").toUpperCase();
+var s1=parseInt(prompt("Enter subject1 marks"));
+var s2=parseInt(prompt("Enter subject2 marks"));
+var s3=parseInt(prompt("Enter subject3 marks"));
+var s4=parseInt(prompt("Enter subject4 marks"));
+var s5=parseInt(prompt("Enter subject5 marks"));
+var s6=parseInt(prompt("Enter subject6 marks"));
+
+var total=s1+s2+s3+s4+s5+s6;
+
+var percentage=(total/600)*100;
+
+document.write("Student name is "+sname+"<br>");
+document.write("subject1 marks is "+s1+"<br>");
+document.write("subject2 marks is "+s2+"<br>");
+document.write("subject3 marks is "+s3+"<br>");
+document.write("subject4 marks is "+s4+"<br>");
+document.write("subject5 marks is "+s5+"<br>");
+document.write("subject6 marks is "+s6+"<br>");
+document.write("Total marks is "+total+"<br>");
+document.write("percentage is "+percentage+"<br>");
+
+if(s1<35 || s2<35 || s3<35 || s4<35 || s5<35 || s6<35)
+	{
+	 document.write("Failed");
+	}
+else
+	{
+	document.write("passed"+"<br>");
+				
+			if(percentage>=85)
+				{
+				document.write("A+ Grade");
+				}
+				else if(percentage<85 && percentage>=60)
+				{
+				document.write("A Grade");
+				}
+				else if(percentage<60 && percentage>=50)
+				{
+				document.write("B Grade");
+				}
+				else
+				{
+				document.write("C Grade");
+				}
+	}
+</script>
+
+
+</head>
+
+<body>
+
+<h3>Hello</h3>
+
+</body>
+</html>

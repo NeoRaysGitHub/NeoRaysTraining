@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+function add()
+{
+	var a=parseInt(f1.num1.value);
+	var b=parseInt(f1.num2.value);
+	var c=a+b;
+	document.getElementById("sample").innerHTML="Addition :"+c;
+	
+	//document.write("<h1>Addition is </h1>"+c);
+}
+
+function sub()
+{
+	var a=parseInt(f1.num1.value);
+	var b=parseInt(f1.num2.value);
+	var c=a-b;
+	document.getElementById("sample").innerHTML="Subtraction :"+c;
+	
+	//document.write("<h1>Addition is </h1>"+c);
+}
+
+
+function mul()
+{
+	var a=parseInt(f1.num1.value);
+	var b=parseInt(f1.num2.value);
+	var c=a*b;
+	document.getElementById("sample").innerHTML="Multiplication :"+c;
+	
+	//document.write("<h1>Addition is </h1>"+c);
+}
+
+function div()
+{
+	var a=parseInt(f1.num1.value);
+	var b=parseInt(f1.num2.value);
+	var c=a/b;
+	document.getElementById("sample").innerHTML="Division :"+c;
+	
+	//document.write("<h1>Addition is </h1>"+c);
+}
+
+
+
+</script>
+</head>
+<body>
+<form name="f1" >
+<table>
+<tr>
+<td>Enter Number1</td>
+<td><input type="text" name="num1"/></td>
+</tr>
+<tr>
+<td>Enter Number2</td>
+<td><input type="text" name="num2"/></td>
+</tr>
+
+<tr>
+<td colspan=2 align="center">
+<input type="button" name="b1" value="Addition" onclick="add();"/>
+<input type="button" name="b2" value="Subtraction"/>
+<input type="button" name="b3" value="Multiplication"/>
+<input type="button" name="b4" value="Division"/>
+</td>
+</tr>
+</table>
+</form>
+
+<div id="sample" style="text-align:center;font-size:28pxl;color:blue">
+</div>
+</body>
+</html>
