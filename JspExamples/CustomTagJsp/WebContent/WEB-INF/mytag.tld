@@ -1,0 +1,17 @@
+
+<taglib>  
+  <tlib-version>1.0</tlib-version>  
+  <jsp-version>1.2</jsp-version>  
+  <short-name>simple</short-name>  
+  <uri>http://tomcat.apache.org/example-taglib</uri>  
+  <description>A simple tab library for the examples</description>  
+  
+  <tag>  
+    <name>cube</name>  
+    <tag-class>com.neorays.customtag.CubeNumber</tag-class>  
+    <attribute>  
+    <name>number</name>  
+    <required>true</required>  
+    </attribute>  
+  </tag>  
+</taglib>  
