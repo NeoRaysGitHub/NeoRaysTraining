@@ -1,7 +1,12 @@
 function validateForm(){
 	var x=document.forms["myForm"]["fname"].value;
-	if(x==""){
-		alert("Name must be filled out");
+	var y=document.forms["myForm"]["lname"].value;
+	if(x==""||x==null){
+		alert("fill your first name");
+		return false;
+	}
+	else if(y==""||y==null){
+		alert("Enter your last name also");
 		return false;
 	}
 }
