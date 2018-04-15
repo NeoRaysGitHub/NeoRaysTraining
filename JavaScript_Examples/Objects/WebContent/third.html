@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="wheat">
+
+<h2>JavaScript Objects</h2>
+
+<p id="demo"></p>
+
+<script>
+function Person(first, last, address, phone) {
+    this.firstName = first;
+    this.lastName = last;
+    this.address = address;
+    this.phonenumber = phone;
+}
+Person.prototype.nationality = "Indian";
+
+var myFather = new Person("shivakumar", "TS", "Channagiri", "123456");
+document.getElementById("demo").innerHTML =
+"My father is " + myFather.nationality; 
+</script>
+
+</body>
+</html>

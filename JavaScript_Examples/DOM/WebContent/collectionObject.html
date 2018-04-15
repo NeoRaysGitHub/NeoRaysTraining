@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Javascript world</title>
+</head>
+<body bgcolor="green">
+<h2>Javascript collection object</h2>
+
+<p>Hello world!</p>
+
+<p>Hello Neorays!!!</p>
+
+<p>Hello Javascript!!</p>
+
+<p id="pru"/>
+
+<script>
+var myCollection=document.getElementsByTagName("p");
+document.getElementById("pru").innerHTML=
+	"inner HTML of the 2nd paragraph is:" + myCollection[1].innerHTML;
+	
+<!-- document.getElementById("pru").innerHTML=
+	"This document contains " + myCollection.length + "paragraphs";  -->
+</script>
+
+<button onclick="myFunction()">Try it</button>
+
+<script type="text/javascript" src="scripts/script2.js"></script>
+</body>
+</html>
