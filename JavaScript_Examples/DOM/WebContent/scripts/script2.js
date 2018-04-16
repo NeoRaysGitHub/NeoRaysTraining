@@ -1,3 +1,4 @@
+"use strict"
 function myFunction() {
     var myCollection = document.getElementsByTagName("p");
     var i;

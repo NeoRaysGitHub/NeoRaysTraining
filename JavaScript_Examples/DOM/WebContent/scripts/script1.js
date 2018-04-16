@@ -1,3 +1,4 @@
+"use strict"
 var p1=document.getElementById("p1");
 var navigation=document.getElementsByTagName("li");
 var test=document.getElementsByTagName("p");

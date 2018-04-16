@@ -1,3 +1,4 @@
+"use strict"
 window.onload=function(){
 	if(document.cookie.length!=0){
 		var nameValueArray=document.cookie.split("=");
@@ -11,5 +12,6 @@ function setColorCookie(){
 	if(selectedColor!="selectcolor"){
 		document.bgColor=selectedColor;
 		document.cookie="color="+selectedColor+";expires=Fri,17 aug 2018 01:00:00 UTC;";
+	
 	}
 }
