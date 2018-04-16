@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<script type="text/javascript">
+function date()
+{
+document.getElementById("id1").innerHTML=Date();
+}
+function show()
+{
+	alert("Evnts started");
+}
+function show2() {
+	alert("double click events")
+}
+</script>
+<body>
+<p id="id1">
+<button onclick="date()">Date-click</button>
+</p>
+<button onclick="show()">click</button>
+<button ondblclick="show2()">double-click</button>
+</body>
+</html>

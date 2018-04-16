@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="cyan">
+<button onclick="push()">click</button>
+<p id="p1"></p>
+<p id="p2"></p>
+
+
+<script type="text/javascript">
+	var name=["ramesh","suresh","hari"];
+	document.getElementById("p1").innerHTML=name;
+
+	function push()
+	{
+	name.push("Mithilesh");
+	document.getElementById("p2").innerHTML=name;
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<button onclick="unshift()">click</button>
+<p id="p1"></p>
+<p id="p2"></p>
+
+<script type="text/javascript">
+	var name=["ramesh","suresh","hari"];
+	document.getElementById("p1").innerHTML=name;
+	
+	function unshift()
+	{
+	name.unshift("Mithilesh");
+	document.getElementById("p2").innerHTML=name;
+	}
+	</script>
+</body>
+</html>

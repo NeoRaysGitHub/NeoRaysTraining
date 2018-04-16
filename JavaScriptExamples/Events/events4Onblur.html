@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function toUpperCase()
+	{
+	var x=document.getElementById("fname");
+	x.value=x.value.toUpperCase();
+	}
+	function toLowerCase() {
+		var l=document.getElementById("pwd");
+		l.value=l.value.toLowerCase();
+	}
+</script>
+</head>
+<body bgcolor="cyan">
+<form action="">
+	<label>Enter userName</label></br>
+	<input type="text" id="fname" onblur="toUpperCase()"></br>
+	<label>Enter Password</label></br>
+	<input type="text" id="pwd" onblur="toLowerCase()">
+</form>
+</body>
+</html>
