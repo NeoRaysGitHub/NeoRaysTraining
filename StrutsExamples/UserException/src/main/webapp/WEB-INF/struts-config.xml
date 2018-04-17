@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<struts-config>
+
+	<form-beans>
+		<form-bean name="studentForm" type="com.cluster.form.StudentForm"/>
+	</form-beans>
+	
+	 <global-exceptions>
+        <exception key="red" type="java.lang.ArithmeticException" path="/jsp/red.jsp"/>
+    </global-exceptions>
+	
+	<action-mappings> 
+	
+		<action path="/login" type="com.cluster.action.ShowPhoneAction" name="studentForm" scope="request"> 
+		<exception key="errors.search.phone.noresults" type="com.cluster.exception.PhoneNumberNotFoundException" path="/jsp/showPhoneNumber.jsp"/>
+        	  <exception key="blue" type="java.lang.ArrayIndexOutOfBoundsException" path="/jsp/showPhoneNumber.jsp"/> 
+        	  <forward name="success" path="/jsp/success.jsp" />
+        </action>
+	</action-mappings> 
+	
+	 <message-resources parameter="com.myapp.ApplicationResources"/>
+	 
+</struts-config> 
