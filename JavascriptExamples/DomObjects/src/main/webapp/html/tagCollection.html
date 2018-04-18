@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<a name="html">this is anchor tag</a><br>
+<a name="css">neorays</a><br>
+<a name="xml">clusterindia</a><br>
+
+<p>Click the button to display the innerHTML of the first anchor in the document.</p>
+
+<button onclick="myFunction()">check out!!!</button>
+
+<p id="anchor"></p>
+<p id="value"></p>
+<p id="ptag"></p>
+
+<script>
+function myFunction() {
+	 document.getElementById("anchor").innerHTML ="Number of anchor tags present are: "+
+		    document.anchors.length;
+    document.getElementById("value").innerHTML ="value of first anchor tag is: "+
+    document.anchors[0].innerHTML;
+    var coll=document.getElementsByTagName("p");
+    document.getElementById("ptag").innerHTML="number of paragraph tags are: "+coll.length;
+}
+</script>
+
+</body>
+</html>
