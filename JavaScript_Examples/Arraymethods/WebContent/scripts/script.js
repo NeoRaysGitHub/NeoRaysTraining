@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 
 alert("displaying the fruits");

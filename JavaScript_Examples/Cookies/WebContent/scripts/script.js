@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 window.onload=function(){
 	if(document.cookie.length!=0){
 		var nameValueArray=document.cookie.split("=");

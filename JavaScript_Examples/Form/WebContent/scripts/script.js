@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 function validateForm(){
 	var x=document.forms["myForm"]["fname"].value;
 	var y=document.forms["myForm"]["lname"].value;

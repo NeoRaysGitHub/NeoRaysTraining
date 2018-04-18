@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 function divide(){
 	var numerator=Number(prompt("Enter numerator"));
 	var denominator=Number(prompt("Enter denominator"));

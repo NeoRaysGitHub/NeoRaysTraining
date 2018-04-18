@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 var myImage=document.getElementById("image");
 var arrayImage=["images/smiley.jpg","images/chicken.jpg","images/kitten.jpg","images/mickey.jpg","images/sky.jpeg"];
 var imageIndex=0;

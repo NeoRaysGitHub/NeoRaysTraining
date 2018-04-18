@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 var numbers = [10, 20, 30];
 // Print the array elements.
 document.write("Array elements are: " + numbers + "<br> ");
