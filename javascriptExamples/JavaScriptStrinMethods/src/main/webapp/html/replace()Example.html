@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>replace()</h2>
+<p id="demo"></p>
+<p id="demo1">demo1</p>
+<p id="demo2"></p>
+<script type="text/javascript">
+//The replace() method replaces a specified value with another value in a string:
+var str="please visit <h2>neorays</h2>";
+var n=str.replace("neorays","<h2>cluster</h2>");
+document.getElementById("demo").innerHTML=n;
+//By default, the replace() function is case sensitive. Writing MICROSOFT (with upper-case) will not work:
+var n1=str.replace("NEORAYS","google");
+	document.getElementById("demo1").innerHTML=n1;
+
+	//To replace case insensitive, use a regular expression with an /i flag (insensitive):
+	 var str1 = "Please visit Microsoft!";
+	var n2 = str1.replace(/MICROSOFT/i, "W3Schools");
+	document.getElementById("demo2").innerHTML=n2;
+
+	</script>
+</body>
+</html>

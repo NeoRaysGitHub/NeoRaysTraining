@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="orange">
+<form>
+enter age to find whether your are eligible for vote:
+<input type="text" id ="fname" onchange="mycall()" />
+</form>
+<script type="text/javascript">
+
+function mycall(){
+	var eligible;
+	var res;
+	
+	var c = document.getElementById("fname").value;
+//var age=document.getElementById("fname");
+
+	if(c>=18){
+		eligible="you are eligible";
+		}
+	else{
+		res=1
+		eligible="not eligible";
+		}
+	alert(eligible);
+}
+</script>
+</body>
+</html>

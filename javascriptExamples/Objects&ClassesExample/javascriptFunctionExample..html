@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="bharath"></p>
+<script type="text/javascript">
+var car={
+		model1:"benz",
+		model2:"maruthi800",
+		model3:"nano",
+		allModel: function(){
+			return this.model1+"  \t"+this.model2+" \t "+this.model3;
+			
+			}
+}
+document.getElementById("bharath").innerHTML=car.allModel();
+</script>
+
+</body>
+</html>

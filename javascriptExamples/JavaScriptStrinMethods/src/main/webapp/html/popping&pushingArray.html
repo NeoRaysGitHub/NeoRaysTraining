@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="orange">
+<h2>pop & push</h2>
+<p id="emp"></p>
+<p id="emp2"></p>
+<p id="push1"></p>
+<p id="push2"></p>
+<p id="sort1"></p>
+<script>
+var employees=["bharath","sachin","mithilesh","suresh"];
+document.getElementById("emp").innerHTML=employees;
+employees.pop();
+//removes the last element array
+document.getElementById("emp2").innerHTML=employees;
+ var fruits=["apple","banana","kiwi","grape","watermelon"];
+ document.getElementById("push1").innerHTML=fruits;
+	fruits.push("pineapple");
+document.getElementById("push2").innerHTML=fruits;
+fruits.sort();
+document.getElementById("sort1").innerHTML=fruits;
+</script>
+
+</body>
+</html>

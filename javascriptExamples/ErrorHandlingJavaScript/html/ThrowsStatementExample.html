@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+function divide(){
+
+	var numerator=Number(prompt("Enter numerator"));
+	var denominator=Number(prompt("ener denominator value"));
+	try{
+if (denominator==0){
+
+	throw{
+		error:"Divide by zero error",
+	message:"denominator cannot be zero"
+		};
+}
+else{
+
+	alert("Result="+(numerator/denominator));
+}		
+}
+	catch(e){
+	document.write(e.error+"<br/>");
+	document.write(e.message+"<br/>");
+		}
+}
+divide();
+</script>
+
+</body>
+</html>

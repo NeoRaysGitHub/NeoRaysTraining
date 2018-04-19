@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function myFunction(){
+	var text=document.getElementById("p002").innerHTML;
+	document.getElementById("execMethod").innerHTML=/t/.exec(text);
+	
+}
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="orange">
+<p id="p002">the bus journey between vijay nagar nad btm is too far</p>
+<button onclick="myFunction()">Press</button>
+<p id="execMethod"></p>
+</body>
+</html>

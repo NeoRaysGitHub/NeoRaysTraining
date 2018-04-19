@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function myFunction(){
+var str="Visit Neorays";
+var n=str.search(/visit/i);
+document.getElementById("first").innerHTML=n;
+	
+}
+function myTest(){
+	var text=document.getElementById("p001").innerHTML;
+	
+	document.getElementById("second").innerHTML=/w/.test(text);
+	
+	
+}
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<button onclick="myFunction()">Press</button>
+<p id="first"></p>
+<button onclick="myTest()">/e/</button>
+<p id="second"></p>
+<p id="p001">living ocst of banglore is too high</p>
+</body>
+</html>

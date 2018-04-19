@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 id="myheader" style="color:red">My gheader</h1>
+<p> click the here to get the styoele of property of the H1 element</p>
+<button onclick="myFunction()">press</button>
+<p id="first"></p>
+<script type="text/javascript">
+function myFunction(){
+	var x=document.getElementById("myheader").style.color;
+	document.getElementById("first").innerHTML=x;
+}
+</script>
+</body>
+</html>

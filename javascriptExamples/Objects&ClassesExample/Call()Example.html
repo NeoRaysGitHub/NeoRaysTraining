@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="bharath"></p>
+<script type="text/javascript">
+
+var Person={
+		firstName:"bharth kumar",
+		lastName:"chennuru",
+		fullName: function(){
+			return this.firstName+"                    "+this.lastName;
+			
+			}
+}
+var myObject={
+		firstName:"bhargavi",
+		lastName:"kalepalli",
+}
+document.getElementById("bharath").innerHTML=Person.fullName.call(myObject);
+</script>
+</body>
+</html>

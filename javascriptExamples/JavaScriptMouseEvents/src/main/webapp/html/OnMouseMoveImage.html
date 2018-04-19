@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function myFunction(e){
+x=e.clientX;
+y=e.clientY;
+coor="Coordinates:("+x+"","+y+")";
+document.getElementById("demo").innerHTML=coor
+
+}
+function clearCoor(){
+	document.getElementById("demo").innerHTML="";
+	
+}
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="margin:0px;">
+<div id="coordiv" style="width:199px;height:99px;border:1px solid"
+onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
+
+<p>place cursor on rectangle ,get the coordinates o f your mouse pointer</p>
+
+<p id="demo"></p>
+
+</body>
+</html>

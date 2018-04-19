@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+body{
+background-color:yellow;
+color:red;
+}
+</style>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p> click the button to dispally the stle properties of this document.</p>
+<button onclick="myFunction()">press</button>
+<p id="first"></p>
+<script>
+function myFunction(){
+	var x=document.getElementsByTagName("STYLE")[0];
+	document.getElementById("first").innerHTML=x.innerHTML;	
+}
+</script>
+</body>

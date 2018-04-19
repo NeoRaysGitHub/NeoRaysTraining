@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<button onclick="mylogic()">press</button>
+
+
+
+<p id="first"></p>
+<script type="text/javascript">
+function mylogic(){
+ var Hours=9;
+ var greeting;
+ 
+if(Hours<18){
+	greeting="good morningday";
+	
+	
+}
+else{
+
+	greeting="good evening";
+}
+document.getElementById("first").innerHTML=greeting;
+}
+
+</script>
+
+</body>
+</html>

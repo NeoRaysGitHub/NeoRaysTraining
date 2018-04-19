@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="orange">
+
+<p id="demo"></p>
+
+<script>
+
+document.getElementById("demo").innerHTML =
+"<center><h2>The temperature is " + toCelsius(77) + " Celsius</h2></center>";
+
+function toCelsius(fahrenheit) {
+    return (5/9) * (fahrenheit-32);
+} 
+
+</script>
+
+</body>
+</html>

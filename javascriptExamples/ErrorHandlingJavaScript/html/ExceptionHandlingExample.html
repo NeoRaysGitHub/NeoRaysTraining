@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+function bharathCall(){
+	var a=100000;
+	alert("a value is \t"+a);
+}
+
+try{
+
+	document.write(bharathCalls());
+	document.write("after bharathCall() statement")
+}catch(e){
+
+	document.write("Message="+e.message+"<br/>");
+	document.write("description="+e.description+"<br/>");
+	document.write("Stack trace="+e.stack+"<br/>");
+	
+}
+document.write("end of the program")
+	</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p>click the following to see the result:</p>
+<form>
+<input type="button" value="click here" onclick ="bharathCall();"/>
+</form>
+</body>
+</html>

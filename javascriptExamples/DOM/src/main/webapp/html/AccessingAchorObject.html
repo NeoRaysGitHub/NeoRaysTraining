@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>A demonstration of how to access an a element</h3>
+<a id="myAnchor" href="https://www.neorays.com">Neorays website</a>
+<p>click the button to get the url of the link.</p>
+<button onclick="myFunction()">press</button>
+<p id="first"></p>
+<script>
+function myFunction(){
+
+	var x=document.getElementById("myAnchor").href;
+	document.getElementById("first").innerHTML=x;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<select id="ddltheme" onchange="setColor()">
+<option value="Select Color">Select Color</option>
+<option value="red">Red</option>
+<option value="green">Green</option>
+<option value="blue">Blue</option>
+</select>
+<script type="text/javascript">
+function setColor(){
+
+	var selectedColor=document.getElementById("ddltheme").value;
+	if(selectedColor!="Select Color"){
+	document.bgColor=selectedColor;
+		}
+}
+</script>
+
+</body>
+</html>
