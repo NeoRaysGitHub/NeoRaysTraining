@@ -1,0 +1,1 @@
+http://localhost:8090/SpringExceptionXml/doMath?a=10&b=20
