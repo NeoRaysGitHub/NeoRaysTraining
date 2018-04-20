@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+ 
+ 
+ <script type="text/javascript">
+$(document).ready(function(){
+	$('p').append(' <b>Langauage</b>')
+})
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$(' <b>Langauage</b>').appendTo('div');
+})
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('p').prepend(' <b>Langauage</b> ')
+})
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$(' <b>Langauage</b>').prependTo('div');
+})
+</script>
+
+<!--  appending one selector to other selector -->
+<!-- <script type="text/javascript">
+$(document).ready(function(){
+	$('p').append($('#first'));
+});
+</script>   -->
+
+<div id="first">java</div>
+
+<p id="div1">jQuery</p>
+<p id="intro">javascript</p><br>
+
+
+</body>
+</html>

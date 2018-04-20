@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<style type="text/css">
+ 		.ButtonStyle
+ 		{
+ 		background-color:red;
+ 		color:white;
+ 		font-weight:bold;
+ 		}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#btn").bind("click mouseover mouseout",function(event){
+	if(event.type == "click")
+			{
+			$('#divResult').html('<br> Button Clicked at pageX= '+event.pageX+'pageY='+event.pageY);
+			}
+		else if(event.type== "mouseover")
+			{
+			$(this).addClass("ButtonStyle");
+			}
+		else
+			{
+				$(this).removeClass("ButtonStyle");
+			}
+		
+		})
+	
+	$("#btn1").click(function(){
+		$("#btn").bind("mouseover", function(){
+			$(this).addClass("ButtonStyle");
+			})
+		});
+	$("#btn2").click(function(){
+		$("#btn").unbind("mouseover");
+		});
+		
+});
+
+
+</script>
+<input id="btn" type="button" value="click"/>
+<input id="btn1" type="button" value="click me"/>
+<input id="btn2" type="button" value="click here"/>
+<div id="divResult"></div>
+</body>
+</html>
