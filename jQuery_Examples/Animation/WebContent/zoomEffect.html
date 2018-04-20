@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("button").click(function(){
+		$("div").animate(
+				{
+					left:"150px",
+					opacity:"0.4", //blur effect after zoom   ,0.5,0.4,1 u can give
+					height:"200px",
+					width:"200px"
+				}
+				)
+		})
+});
+</script>
+
+</head>
+<body bgcolor=gold>
+<button>click to zoom</button>
+<h4>it will get zoom</h4>
+<div id="div1" style="background:purple;height:100px;width:100px;position:absolute"></div><br>
+<div id="div12" style="background:purple;height:100px;width:100px;position:absolute"></div><br>
+<div id="div2" style="background:purple;height:100px;width:100px;position:relative"></div><br>
+</body>
+</html>

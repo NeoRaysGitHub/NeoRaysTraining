@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+	.boldClass
+	{
+	font-weight:bold;
+	}
+	.italicClass
+	{
+	font-style:italic;
+	}
+	.colorClass
+	{
+	color:red;
+	}
+</style>
+
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+     $('#btn1').click(function(){
+       $('p').addClass('colorClass');  
+     });
+	     $('#btn2').click(function(){
+	       $('p').removeClass('colorClass')  
+	       });
+	     $('#btn3').click(function(){
+		       $('p').addClass('colorClass italicClass')  
+		       });
+	     $('#btn4').click(function(){
+		       $('p').removeClass('colorClass italicClass')  
+		       });
+	     $('#btn5').click(function(){
+		       $('p').addClass('colorClass italicClass boldClass')  
+		       });  
+	     $('#btn6').click(function(){
+		       $('p').removeClass()  
+		       });  
+	     $('#btn7').click(function(){
+		       $('p').toggleClass('colorClass italicClass boldClass')  
+		       });  
+  });
+</script>
+
+</head>
+
+
+<body bgcolor="wheat" style="font-family:Aerial">
+
+
+<p> Be Happy In Your Whole Life, Let The Reason </p><br>
+
+<table>
+<tr>
+<td><input type="button" style="width:250px" id="btn1" value="Add Color Class"/></td>
+<td><input type="button" style="width:250px" id="btn2" value="Remove Color Class"/></td>
+</tr>
+
+<tr>
+<td><input type="button" style="width:250px" id="btn3" value="Add Color and Italics Classes"/></td>
+<td><input type="button" style="width:250px" id="btn4" value="Remove Color and Italic Classes"/></td>
+</tr>
+
+<tr>
+<td><input type="button" style="width:250px" id="btn5" value="Add Color Bold Italic Classes"/></td>
+<td><input type="button" style="width:250px" id="btn6" value="Remove All Class"/></td>
+</tr>
+
+<tr>
+<td><input type="button" style="width:250px" id="btn7" value="Toggle Classes"/></td>
+<td><input type="button" style="width:250px" id="btn8" value=""/></td>
+</tr>
+</table>
+
+</body>
+</html>
