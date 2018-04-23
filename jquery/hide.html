@@ -1,0 +1,27 @@
+<html>
+    <head>
+       <script src="jquery-3.3.1.min.js"></script>  
+          
+    </head>
+<body>
+    <p>welcome to myworld</p>
+    <!--<button id="b1">Hide</button>
+    <button id="b2">Show</button> -->
+    <button>Toggle</button>
+    <script>
+     $(document).ready(function(){
+           /* $("#b1").click(function(){
+               $("p").hide(1500); 
+            });
+            $('#b2').click(function(){
+               $("p").show(1500); 
+            });*/
+         $("button").click(function(){
+             jQuery("p").toggle();
+         });
+        });
+    </script>
+    
+    </body>
+    
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <head>
+       <script src="jquery-3.3.1.min.js"></script>  
+          
+    </head>
+<body>
+    <p id="12">This is <b>demo</b> program</p>
+    <button id="1">text</button>
+    <button id="2">html</button>
+    <script>
+    $(document).ready(function(){
+        $("#1").click(function(){
+            alert("Text:" + $("#12").text());
+        });
+        $("#2").click(function(){
+            alert("Html:" + $("#12").html());
+        });
+    });
+    </script>
+    </body>
+    
+</html>
