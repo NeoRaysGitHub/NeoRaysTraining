@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#clickBtn').on('click',
+	{
+	fname:'sachin',
+	lname:'HN'
+	}, 
+	sayHello);
+
+	$('#clickBtn').on('click',
+			{
+			fname:'sachin',
+			}, 
+			sayHello);
+	
+	function sayHello(event)
+	{
+alert('hello '+event.data.fname+(event.data.lname!=null ?''+event.data.lname:''));
+		}
+});
+
+</script>
+</head>
+<body>
+<input type="button" id="clickBtn" value="click"/>
+</body>
+</html>

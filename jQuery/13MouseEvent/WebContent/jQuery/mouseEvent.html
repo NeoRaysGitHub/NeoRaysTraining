@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $('img[src="help.jpg"]').mouseover(function () {
+     var helpInconId=$(this).attr('id');
+     var divId=helpInconId.replace('img','div');
+     $('#'+divId).fadeIn(500);
+    }).mouseout(function () {
+    	 var helpInconId=$(this).attr('id');
+         var divId=helpInconId.replace('img','div');
+         $('#'+divId).fadeOut(500);
+    });
+
+    function getDivId(helpIcon) {
+        var helpIconId = $(helpIcon).attr('id');
+        return helpIconId.replace('img', 'div');
+    }
+})
+</script>
+</head>
+<body>
+<table>
+<tr>
+<td>First Name</td>
+<td style="vertical-align: middle;">
+<input type="text" id="textFirstName" class="inputRequired"/>
+</td>
+<td><img id="imgFirstNameHelp" src="help.jpg"/></td>
+<td><div id="divFirstNameHelp" style="display:none" >First name as shown in passport</div></td>
+</tr>
+
+<tr>
+<td>last Name</td>
+<td><input type="text" id="textLatName" class="inputRequired"/>
+</td>
+<td><img id="imgLatNameHelp" src="help.jpg"/></td>
+<td><div id="divLatNameHelp" style="display:none" >last name as shown in passport</div></td>
+</tr>
+
+<tr>
+<td>city</td>
+<td>
+<select id="ddlCity" class="inputRequired">
+<option value="USA">United State</option> 
+<option value="IND"> India</option>
+<option value="CA">canada</option>
+<option value="UK">United Kingdom</option>
+</select>
+</td>
+<td><img id="imgddlCity" src="help.jpg"/></td>
+<td><div id="divddlCity" style="display:none" >your city</div></td>
+<tr>
+<td>Skills</td>
+<td><input type="checkbox" name="Skills" value="java" />java
+<input type="checkbox" name="Skills" value="C++" />C++
+<input type="checkbox" name="Skills" value="js" />javaScript
+</td>
+<td><img id="imgSkills" src="help.jpg"/></td>
+<td><div id="divSkills" style="display:none">your skills</div></td>
+</tr>
+
+</table>
+</body>
+</html>
