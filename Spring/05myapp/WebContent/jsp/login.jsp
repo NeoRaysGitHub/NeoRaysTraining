@@ -1,0 +1,11 @@
+
+<!DOCTYPE form PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<body>
+	<form action="hello" >
+
+		Name:<input type="text" name="name" /><br />
+		 Password:<input type="password" name="password" /><br /> <input type="submit" value="login" />
+</body>
+</form>
+</html>
