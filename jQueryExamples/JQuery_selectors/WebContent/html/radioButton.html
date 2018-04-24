@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script>
+$(document).ready(function()
+		{
+			$(":radio").wrap("<span style='background-color:red'>");
+		});
+		
+</script>
+</head>
+<body>
+<form action=" ">
+Name:<input type="text" name="user"><br>
+male:<input type="radio" value="m"><br>
+female:<input type="radio" value="f"><br>
+<input type="submit">
+<p> we use jQuery.wrap method to highlight the selected elements, bcz firefox does not support background color on radiobuttons</p>
+</form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("button").click(function(){
+			alert($("#url").attr("href"));
+		});
+	});
+</script>
+</head>
+<body>
+<p> <a href="https://login.recruit.naukri.com/?msg=TO&URL=https%3A%2F%2Frecruit.naukri.com" id="url">noukri.com</a></p>
+<button> show href value</button>
+</body>
+</html>

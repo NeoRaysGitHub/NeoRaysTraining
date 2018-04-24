@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#btn1").click(function(){
+		$("p1,p").addClass("green");
+		$("h2").addClass("important");
+		$("h2").addClass("brown");
+	});
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("#btn2").click(function(){
+        $("p2, h3, p4").toggleClass("brown");
+    });
+});
+</script>
+<style>
+.important
+{
+	font-wieght:bold;
+	font-size:xx-large;
+}
+.green
+{
+	color:green;
+}
+.brown
+{
+	color:brown;
+}
+</style>
+</head>
+<body>
+<div id="div1" style="hieght:100px; width:300px;border:1px solid black; background-color:purple;">
+<p1>Hi</p1>
+<h2>Welcome to neorays</h2>
+<p>have a nice day</p>
+<button id="btn1">addClass</button>
+</div>
+</br></br>
+
+<div id="div2" style="hieght:100px; width:300px;border:1px solid black; background-color:green;">
+<p2>Hi</p2>
+<h3>Welcome to neorays</h3>
+<p4>have a nice day</p4><br>
+<button id="btn2">ToggleClass</button>
+</div>
+</body>
+</html>

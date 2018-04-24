@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://localhost:8090/jQuery_Animation/html/animation.html"></script>
+<style>
+.imagestyle
+{
+	height:100px;
+	width:100px;
+	border:3px solid grey;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#divContainer img").on()({
+	mouseOver:function(){
+		$(this).css({
+			'cursor':'pointer',
+			'border-color':'red'
+		});
+		},
+		mouseout:function(){
+			$(this.css({
+				'cursor':'defualt',
+				'border-color':'grey'
+			});
+			},
+		click:function(){
+			var imageUrl=$(this).attr('src');
+			//[$('#mainImage').attr('src',imageUrl);]
+			$('#mainImage').fadeout(300,function(){
+				$(this).attr('src',imageUrl);
+			}).fadeIn(300);
+			}
+		});
+});
+</script>
+</head>
+<body>
+<img id="mainImage" height="500" width="440" style="border: 3px solid greay" src="../images/bird1.jpg"/>
+<br>
+<div id="divContainer">
+<img src="../images/bird1.jpg" class="imagestyle"/>
+<img src="../images/bird2.jpg" class="imagestyle"/>
+<img src="../images/bird3.jpg" class="imagestyle"/>
+<img src="../images/bird4.jpg" class="imagestyle"/>
+</div>
+</body>
+</html>
