@@ -1,0 +1,23 @@
+<html>
+<h1>hi</h1>
+<script>
+function myfunction()
+{
+	var x,y;
+	x=document.getElementById("x").value;
+	y=document.getElementById("y").value;
+	x=parseInt(x);
+	 y=parseInt(y);
+	document.getElementById("demo").innerHtml="x+y";
+	
+	alert(x+y);
+	
+}
+</script>
+<body bgcolor=>
+<p id="demo" > </p>
+<input type="text" id="x"><br><br>
+<input type="text" id="y"><br><br>
+<button type="button" onclick="myfunction()">click</button>
+</body>
+</html>

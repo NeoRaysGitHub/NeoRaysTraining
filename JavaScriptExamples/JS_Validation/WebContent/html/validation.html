@@ -1,0 +1,142 @@
+<style type="text/css">
+.color
+{
+color: blue;
+font-size: "25px";
+background: silver;
+}
+
+.ashh
+{
+background:pink;
+}
+
+.home
+{
+	float=right;
+}
+</style>
+<!DOCTYPE html>
+<html>
+<head> 
+<h1> Enter your details:</h1>
+
+<script>
+function focusFunction() {
+    // Focus = Changes the background color of input to yellow
+    document.getElementById("fname").style.background = "yellow";
+}
+
+function blurFunction() {
+    // No focus = Changes the background color of input to red
+    document.getElementById("fname").style.background = "red";
+}
+function myFunction() 
+{
+    var x= document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+function validateForm() 
+{
+    var name = document.forms["myForm"]["fname"].value;
+    var pwd = document.forms["myForm"]["pwd"].value;
+    var email = document.forms["myForm"]["email"].value;
+    var phone = document.forms["myForm"]["phone"].value;
+    var age = document.forms["myForm"]["age"].value;
+    if (name == "")
+        {
+        alert("Name must be filled out");
+        return false;
+    }
+    else if(!isNaN(name))
+        {
+			alert("name cannot contain numbers");
+			return false;
+        }
+
+ 
+    if (name.match(/[A-Z]*$/)) 
+     
+     {
+        alert("use uppercase only");
+        return false;
+    }
+    
+    else if(!name.match(/^\S{3,}$/))
+    { 
+	alert("name cannot contain space");
+return false; }
+    
+    if (pwd == "")
+    {
+    alert("pwd must be filled out");
+    return false;
+	}
+
+    else if(pwd.length<6 || pwd.length>12)
+    {
+			alert("password lrngth should be 6-12 characters ");
+			return false;
+     }
+ else if(pwd.match(/^[a-z]*$/)) 
+         {
+ 				alert("pwd should be alphanumeric");
+ 				return false;
+         }
+
+	
+    if(name=="" || pwd=="" )  
+	   {
+			alert("name and password sould not be empty");
+			return false;
+	   }  
+    
+
+    
+
+			if(email== "" )
+        	{
+				alert("email should not be empty");
+				return false;
+        	}
+    	else if(!email.match(/[@]/))
+        	{
+				alert("email should contain @");
+				return false;
+        	}
+
+		
+
+    		
+    if(phone.match(/^[A-Z][a-z]*$/))
+    	    {
+				alert("phone shoud contain only numbers");
+				return false;
+	    	}
+    
+	
+	if(age>100)
+		{
+			alert("age should be below 100");
+			return false;
+		}
+	
+		
+}
+</script>
+</head>
+<body bgcolor="skyblue">
+
+<form name="myForm" onsubmit="return validateForm()" method="post"  action="success.html">
+<input type="submit" value="Home" class="home"><br>
+Name: <input type="text" id="fname"  class="ashh"  onfocus="focusFunction()" onblur="blurFunction()" onblur="myFunction()"><br>
+password:<input type="password" name="pwd"><br>
+Email:<input type="email" name="email"><br>
+Phone:<input type="text" name="phone"><br>
+Age:<input type="text" name="age"><br>
+<input type="submit" value="Submit" class="color">
+<input type="submit" value="Back" class="color">
+</form>
+
+</body>
+</html>

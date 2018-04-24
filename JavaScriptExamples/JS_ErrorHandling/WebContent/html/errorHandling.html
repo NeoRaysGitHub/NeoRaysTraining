@@ -1,0 +1,40 @@
+<style type="text/css">
+.color
+{
+color:green;
+font-size: "25px";
+
+}
+</style>
+<html>
+<head></head>
+<body bgcolor="wheat">
+<p>enter a number :</p>
+<input id="demo" type="text">
+<button type="button" class="color" onclick="myFunction()" >Test Input</button>
+<p id="message" class="color" ></p>
+<script>
+function myFunction()
+{
+	var message,x;
+	message=document.getElementById("message");
+	message.innerHTML="";
+	x=document.getElementById("demo").value;
+	try
+	{
+		if(x == "") throw "empty";
+		if(isNaN(x) ) throw "not a number";
+		x = Number(x);
+		if(x < 5) throw "too low";
+		if(x > 10) throw"too high";
+
+	}
+	catch(err)
+	{
+		message.innerHTML="input is" +err;
+		}
+		
+	}
+</script>
+</body>
+</html>
