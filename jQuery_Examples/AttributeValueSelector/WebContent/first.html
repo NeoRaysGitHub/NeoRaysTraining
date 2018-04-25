@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Attribute value selector</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('[title="div1Title"]').css('border','5px solid red');
+	$('[title!="div1Title"]').css('border','5px solid blue');
+	$('[title*="Title"]').css('border','5px solid black');
+	$('[title~="mySpan"]').css('border','5px solid yellow');
+	$('[title|="myTitle"]').css('border','5px solid green');
+	$('[title^="div"]').css('border','5px solid cyan');
+	$('[title$="Heading"]').css('border','5px solid purple');
+});
+</script>
+</head>
+<body bgcolor="pink">
+<div title="div1Title">
+DIV 1
+</div><br><br>
+<div title="div2Title">
+DIV 2
+</div><br><br>
+<p title="myTitle-paragraph">
+This is a paragraph
+</p><br><br>
+<p title="myTitle Heading">
+This is a paragraph
+</p><br><br>
+<span title="div1Title">
+SPAN 1
+</span><br><br>
+<span title="mySpan as Heading">
+SPAN 2
+</span>
+</body>
+</html>

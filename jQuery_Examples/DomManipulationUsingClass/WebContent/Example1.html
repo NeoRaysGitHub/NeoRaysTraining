@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Pruthvi class</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+.boldClass{font-weight:bold;}
+.italicsClass{font-style:italic;}
+.colorClass{color:yellow;}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#b1').click(function(){
+		$('p').addClass('colorClass');
+	});
+	$('#b2').click(function(){
+		$('p').removeClass('colorClass');
+	});
+	$('#b3').click(function(){
+		$('p').addClass('colorClass italicsClass');
+	});
+	$('#b4').click(function(){
+		$('p').removeClass('colorClass italicsClass');
+	});
+	$('#b5').click(function(){
+		$('p').addClass('colorClass italicsClass boldClass');
+	});
+	$('#b6').click(function(){
+		$('p').removeClass('colorClass italicsClass boldClass');
+	});
+	$('#b7').click(function(){
+		$('p').toggleClass('colorClass italicsClass boldClass');
+	});
+});
+</script>
+</head>
+<body style="font-family: Arial" bgcolor="silver">
+<p>Neorays Software Solutions Pvt. Ltd</p>
+<table border="1">
+<tr>
+	<td><input type="button" style="width:250px" id="b1" value="Add Color Class"/></td>
+	<td><input type="button" style="width:250px" id="b2" value="Remove Color Class"/></td>
+</tr>
+<tr>
+	<td><input type="button" style="width:250px" id="b3" value="Add Color and Italic Classes"/></td>
+	<td><input type="button" style="width:250px" id="b4" value="Remove Color and Italic Classes"/></td>
+</tr>
+<tr>
+	<td><input type="button" style="width:250px" id="b5" value="Add Color,Italic and Bold Classes"/></td>
+	<td><input type="button" style="width:250px" id="b6" value="Remove Color,Italic and BoldClasses"/></td>
+</tr>
+<tr>
+	<td><input type="button" style="width:250px" id="b7" value="Remove Color,Italic and BoldClasses"/></td>
+</tr>
+</table>
+</body>
+</html>

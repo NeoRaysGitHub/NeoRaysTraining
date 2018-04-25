@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Traversal</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type = "text/javascript">
+         $(document).ready(function() {
+            //$("span").parent().css({"color": "red", "border": "2px solid red"});
+           // $("span").parents().css({"color": "red", "border": "2px solid red"});
+        	$("span").parentsUntil("div").css({"color": "red", "border": "2px solid red"});
+         });
+</script>
+</head>
+<body>
+<h1>This is DOM Traversal Example</h1>
+<div>
+	<nav>
+	<h2>Numbers</h2>
+		<ul>
+			<li class="top">One</li>
+			<li class="middle">Two</li>
+			<li class="bottom">Three</li>
+			<li>
+				<span>Span</span>
+			</li>
+		</ul>
+	</nav>
+</div>
+</body>
+</html>

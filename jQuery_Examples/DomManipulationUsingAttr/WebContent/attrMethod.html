@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>attr method</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var divs=$('div');
+	//$('div').attr('title');
+	//$('div').attr('title','New Div Title');
+	divs.each(function(i){
+		$(this).attr('title','DIV' + (i+1) + 'Title');
+	});
+	divs.each(function(){
+		alert($(this).attr('title'));
+	});
+		
+});
+</script>
+</head>
+<body style="font-family: Arial" bgcolor="cyan">
+<h1>DOM manipulation using attr() method</h1>
+<div id="div1" title="My DIV1">
+DIV 1
+</div><br>
+<div id="div2" title="My DIV2">
+DIV 2
+</div>
+</body>
+</html>

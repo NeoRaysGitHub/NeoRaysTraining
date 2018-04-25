@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Animation</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#myImage').click(function(){
+		$(this)
+		.animate({'left':300})
+		.animate({'top':300})
+		.animate({'left':20})
+		.animate({'top':20});
+	});
+});
+</script>
+<script>
+$(document).ready(function(){
+$('#myButton').click(function(){
+$('#myDiv').animate({'font-size':50},2000);
+});
+$('#myImage').on({
+	mouseover:function(){
+		$(this).animate({'height':400,'width':400,},3000);
+		},
+	mouseout:function(){
+		$(this).animate({'height':100,'width':100},3000,'linear',animationComplete);
+		}
+	});
+function animationComplete(){
+	alert('Animation completed');
+	}
+});
+</script>
+</head>
+<body bgcolor="pink"style="font-family: Arial">
+<h1>Animation using animate() function</h1>
+<input type="button" id="myButton" value="Animate"/>
+<br/><br/>
+<img id="myImage" height="100px" width="100px" src="images/kitten.jpg" style="position:absolute" />
+<!-- <div id="myDiv">
+jQuery animate function
+</div> -->
+
+</body>
+</html>

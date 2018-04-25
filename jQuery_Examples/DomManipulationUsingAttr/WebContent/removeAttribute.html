@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Removing the attribute title</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var config={
+			'title':'New Div Title',
+			'style':'border:3px solid purple',
+			'name':'My div'
+	};
+	$('div').attr(config);//we can directly specify that json object inside attr
+	var result='DIV elements with Title attribute=' +$('div[title]').length+'<br>';
+	result+='Removing title attribute<br/>'
+		$('div[title]').removeAttr('title');
+	var result='DIV elements with Title attribute=' +$('div[title]').length;
+	$('#resultSpan').html(result);
+})
+</script>
+</head>
+<body style="font-family: Arial" bgcolor="pink">
+<h1>Removing the Title attribute using removeAttr() method</h1>
+<div id="div1" title="My DIV1">
+DIV 1
+</div><br>
+<div id="div2" title="My DIV2">
+DIV 2
+</div><br>
+<span id="resultSpan"></span>
+</body>
+</html>

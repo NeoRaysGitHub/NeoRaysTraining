@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>insert using before</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('div').before('<h3>Programming</h3>');
+	//$('<h3>Programming</h3>').insertBefore('div');
+	});
+</script>
+</head>
+<body style="font-family: Arial" bgcolor="purple">
+<h1>Insert using before</h1>
+<h3>insert can be done using either before() or insertBefore()</h3>
+<span id="mySpan">Training courses</span>
+<div id="div1" title="My DIV1">jQuery</div><br>
+<div id="div2" title="My DIV2">ASP.NET</div><br>
+<div id="div3" title="My DIV3">C#</div><br>
+
+</body>
+</html>

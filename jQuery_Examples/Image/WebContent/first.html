@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Image</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#div1').html("height=" + $('#image1').height() + "<br/>" + "width=" + $('#image1').width())
+});
+</script>
+</head>
+<body>
+	<div id="div1"></div>
+	<img src="kitten.jpg" id="image1"/>
+</body>
+</html>

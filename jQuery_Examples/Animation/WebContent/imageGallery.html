@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Gallery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/script2.js"></script>
+<style type="text/css">
+	.imgStyle
+	{
+		width:100px;
+		height:100px;
+		border:3px solid grey;
+
+	}
+</style>
+</head>
+<body>
+<!-- Select Effect:<select id="selectImageEffect">
+	<option value="Fade">Fade</option>
+	<option value="Slide">Slide</option>
+</select>
+Time in seconds:<select id="selectImgDuration">
+	<option value="0.5">0.5</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+</select>
+<input type="button" id="btnEnlarge" value="Enlarge"/>
+<input type="button" id="btnShrink" value="Shrink"/>
+<br/><br/> -->
+<input type="button" id="btnstart" value="Start Slideshow"/>
+<input type="button" id="btnstop" value="Stop Slideshow"/>
+<br/><br/>
+<img id="mainImage" style="border:3px solid grey" src="images/smiley.jpg" height="500" width="540"/>
+<br/>
+<div id="divId">
+	<img class="imgStyle" src="images/smiley.jpg"/>
+	<img class="imgStyle" src="images/chicken.jpg"/>
+	<img class="imgStyle" src="images/kitten.jpg"/>
+	<img class="imgStyle" src="images/mickey.jpg"/>
+	<img class="imgStyle" src="images/sky.jpeg"/>
+</div>
+
+</body>
+</html>

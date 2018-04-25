@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pruthvi</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var intArray=[1,2,3,4,5];
+		function funcA(index,element){
+			return element*5;
+		}
+		function funcB(element,index){
+			return element*5;
+		}
+		var result1=$.each(intArray,funcA);
+		var result2=$.map(intArray,funcB);
+
+		document.write('each='+result1);
+		document.write('<br/>');
+		document.write('map='+result2);
+		document.write('<br/>');
+
+		$.each(intArray,function(index,element){
+			if(element==3)
+				return false;
+				document.write(element+',');
+			});
+		document.write('<br/>');
+
+		$.map(intArray,function(element,index){
+			if(element==3)
+				return false;
+				document.write(element+',');
+			});
+		
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

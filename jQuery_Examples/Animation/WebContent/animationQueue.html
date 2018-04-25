@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Animation</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#myDiv1')
+	.animate({'width':500},1500)
+	.animate({'padding':20},1500)
+	.animate({'font-size':50},1500)
+	.animate({'boredr-width':10},1500)
+	.animate({'opacity':1},1500);
+	
+	$('#myDiv2')
+	.animate({'width':500},1500)
+	.animate({'padding':20},1500)
+	.animate({'font-size':50},1500)
+	.animate({'boredr-width':10},1500)
+	.animate({'opacity':1},1500);
+	$.fx.off=$('#chkbox').is(':checked');	
+});
+</script>
+<style>
+	.myDivClass{
+		width:150px;
+		padding:5px;
+		font-size:18px;
+		border:3px solid black;
+		opacity:.4;
+		background-color:purple;
+		color:white;
+	}
+</style>
+</head>
+<body style="font-family:Arial">
+<input type="button" id="myButton" value="start animation"/>
+<input type="checkbox" id="chkbox"/>Turn off notification
+<br/><br/>
+<div id="myDiv1" class="myDivClass">
+jQuery animation
+</div>
+<br/><br/>
+<div id="myDiv2" class="myDivClass">
+Neorays solutions
+</div>
+</body>
+</html>

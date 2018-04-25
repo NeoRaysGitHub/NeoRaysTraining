@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Element selector</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('[title]').css('border','5px solid blue');
+	//$('div[title]').css('border','5px solid blue');
+	//$('[title="Title"]').css('border','5px solid blue');
+	//$('div[title="Title"]').css('border','5px solid blue');
+});
+</script>
+</head>
+<body bgcolor="wheat">
+<div title="divTitle" style="background-color:red">
+RED Div
+</div><br><br>
+<div title="divTitle" style="background-color:green">
+GREEN Div
+</div><br><br>
+<div title="divTitle">
+NORMAL Div
+</div><br><br>
+<div>
+NORMAL Div Without any attribute
+</div><br><br>
+
+</body>
+
+</html>

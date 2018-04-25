@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Element selector</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('span,a,div').css('background-color','red');
+	//$('tr').css('background-color','yellow');
+	alert($('td').length);
+	alert($('table').html());
+	$('table tr').each(function(){
+		alert($(this).html());
+		});
+	$('tr:even').css('background-color','yellow');
+	$('tr:odd').css('background-color','grey');
+});
+</script>
+</head>
+<body>
+<table border="1">
+<tr>
+	<td>parents</td>
+	<td>father</td>
+	<td>mother</td>
+</tr>
+<tr>
+	<td>siblings</td>
+	<td>brother</td>
+	<td>sister</td>
+</tr>
+<tr>
+	<td>grandparents</td>
+	<td>grandpa</td>
+	<td>grandma</td>
+</tr>
+</table><br><br>
+
+<div>DIV 1</div>
+
+<div>DIV 2</div>
+
+<span>SPAN 1</span>
+
+<div>DIV 3</div>
+
+</body>
+
+</html>

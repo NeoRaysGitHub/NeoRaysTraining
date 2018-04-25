@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Pruthvi</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('li').css('color','blue');
+		$('li').slideUp(2000);
+		$('li').slideDown(2000);
+		var intArray=[100,200,300,400,500];
+		var jsObject={ 
+						'India':'New Delhi',
+						'USA':'Washington D C',
+						'UK':'London',
+						'Australia':'Canberra'
+		};
+		var result= '';
+		$.each(jsObject,function(key,element){
+			result+="key="+key+',value='+element+'<br/>';
+		});
+		$('#resultDiv').html(result);
+	});
+</script>
+</head>
+<body bgcolor="brown" style="font-family: Arial">
+<h2>$.each() is used to iterate over the items in javascript array or object</h2>
+	<ul>
+		<li>India</li>
+		<li>Australia</li>
+		<li>USA</li>
+		<li>UK</li>
+		<li>Korea</li>
+	</ul>
+	<div id="resultDiv"></div>
+</body>
+</html>
