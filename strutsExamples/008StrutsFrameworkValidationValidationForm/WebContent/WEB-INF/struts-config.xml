@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "struts-config_1_2.dtd">
+<struts-config>
+
+
+<form-beans>
+
+<form-bean type="com.bharath.form.LoginForm" name="loginForm"/>
+
+</form-beans>
+
+
+<action-mappings>
+
+<action type="com.bharath.action.LoginAction" name="loginForm" input="/jsp/login.jsp" validate="true" path="/login">
+
+<forward name="success" path="/jsp/success.jsp"/>
+
+<forward name="error" path="/jsp/error.jsp"/>
+
+</action>
+
+</action-mappings>
+
+<message-resource parameter="myapp.ApplicationResources"/>
+
+
+<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+
+<set-property value="/WEB-INF/validator-rules.xml,/WEB-INF/validator.xml" property="pathnames"/>
+
+</plug-in>
+</struts-config>
