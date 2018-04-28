@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#btn").click(function(){
+		$("#div1").load("demo.html #p1");
+		})
+})
+</script>
+</head>
+<body>
+<h1>Welcome to AJAX</h1>
+<input type="button" id="btn" value="get External content"/>
+<div id="div1"></div>
+</body>
+</html>
