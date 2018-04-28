@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+		.containerDiv
+		{
+			background-color:pink;
+			font-weight:bold;
+			color:purple;
+			margin:3px;
+		}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('div').wrap('<div class="containerDiv"></div>')
+	
+	//$('div').wrapAll('<div class="containerDiv"></div>')//in between lines no space will found
+	//$('div').wrapInner('<div class="containerDiv"></div>')//in between lines no space will found
+	$('div').unwrap();
+});
+</script>
+</head>
+<body>
+<div id="div1">DIV1</div>
+<div id="div2">DIV2</div>
+</body>
+</html>

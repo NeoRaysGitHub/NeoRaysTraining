@@ -1,0 +1,35 @@
+ <!--  <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Demo.WebForm1" %>-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="jquery-ui.css" rel="stylesheet"/>
+<script src="jquery-ui.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#txtName").tooltip({
+		content:getToolTipData,
+		track:true,
+		show:{delay:100, duration:500, effect:"slideDown"},
+		hide:{delay:100, duration:500, effect:"slideUp"},
+		});
+	function getToolTipData()
+	{
+		return "ToolTip from a function";
+		}
+});
+</script>
+
+</head>
+
+<body>
+<form id="form1"  >
+<label id="lblName" for="txtName" title="Full Name">Name</label>
+<input id="txtName" type="text" title="your full name as it is appears in passport"/>
+</form>
+</body>
+</html>
