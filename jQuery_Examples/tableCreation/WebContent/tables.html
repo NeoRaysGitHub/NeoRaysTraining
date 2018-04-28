@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	alert("rows are "+$('tr').length);
+	alert("columns are "+$('td').length);
+
+	alert($('table').html());
+
+	alert($('tr').html());
+
+	$('tr:even').css('background-color','pink');
+	$('tr:odd').css('background-color','wheat');
+	$('table,tr,td').css('border','5px solid black');//table border
+	$("#div1").css('border','3px solid red');  //this is of div statement border
+	
+	
+})
+</script>
+<table id="table1" border="1" >
+<tr>
+<td>verilog</td>
+<td>HDL</td>
+<td>HPCN</td>
+</tr>
+<tr>
+<td>java</td>
+<td>testing</td>
+<td>.net</td>
+</tr>
+<tr>
+<td>mechanical</td>
+<td>civil</td>
+<td>automobile</td>
+</tr>
+</table>
+<br>
+<div id="div1" style="background-color: yellow">welcome</div>
+
+</body>
+</html>
