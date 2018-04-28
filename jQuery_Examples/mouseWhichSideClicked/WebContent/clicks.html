@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+function whichMouseButtonClicked(event)
+{
+	var whichButton;
+	if(event.which)
+		{
+		switch(event.which)
+		{
+		case 1: whichButton="Left Button Clicked";break;
+		case 2: whichButton="Middle Button Clicked";break;
+		case 3: whichButton="Right Button Clicked";break;
+		default: whichButton="Invalid Button Clicked";break;
+			}
+		}
+	else
+		{
+		switch(event.button)
+		{
+		case 1: whichButton="Left Button Clicked";break;
+		case 4: whichButton="Middle Button Clicked";break;
+		case 2: whichButton="Right Button Clicked";break;
+		default: whichButton="Invalid Button Clicked";break;
+		}
+	}
+	$("#divResult").html(whichButton);
+	//document.getElementById("divResult").innerHTML=whichButton;
+	}
+</script>
+
+</head>
+<body>
+<input type="button" id="btn" value="click here" onmouseup="whichMouseButtonClicked(event)"/><br/>
+<br/>
+<div id="divResult"></div>
+
+
+</body>
+</html>
