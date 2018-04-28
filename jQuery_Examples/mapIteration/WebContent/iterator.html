@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){
+	var intArray=[1,2,3,4,5];
+
+	function functionA(index,element){
+		return element*2;
+		}
+
+	function functionB(index,element){ //it gives index[0]*elemnt=0;
+		return element*2;
+	}
+
+	function functionC(element,index){
+		return element*2;
+	}
+	
+	var result1 = $.each(intArray, functionA);
+	var result2 = $.map(intArray,functionB);
+	var result3 = $.map(intArray,functionC);
+	
+	document.write("Each = "+result1);
+	document.write("<br/>");
+	document.write("Map with index = "+result2+"<br>");
+	document.write("Map with element = "+result3);
+})
+</script>
+</body>
+</html>
