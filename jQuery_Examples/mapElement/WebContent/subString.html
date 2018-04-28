@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+<script> 
+$(document).ready(function(){
+
+    //each
+	var result="";
+	$("li").each(function(index,element){
+		result+= $(element).text()+"|";
+	}).get();
+	result=result.substr(0,result.length-1);
+	alert(result);
+
+	//map
+	$("li").map(function(index,element){
+		return $(element).text();
+	}).get().join("|");
+	result=result.substr(0,result.length);
+	alert(result);
+})
+</script>
+<ul>
+	<li>India</li>
+	<li>US</li>
+	<li>UK</li>
+	<li>Nepal</li>
+</ul>
+</body>
+</html>
