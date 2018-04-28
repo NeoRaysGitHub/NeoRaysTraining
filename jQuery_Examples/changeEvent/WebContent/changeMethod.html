@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+	.TextBoxStyle
+	{
+	background-color: green;
+	color:white;
+	}
+</style>
+
+  <script>
+$(document).ready(function(){
+	$('input[type="text"]').each(function(){
+		$(this).focus(function(){
+		$(this).addClass("TextBoxStyle");
+})
+$(this).blur(function(){
+			$(this).removeClass("TextBoxStyle");
+			})
+	})
+});
+</script>
+
+<script>
+$(document).ready(function(){
+	$('#ddlcity').change(function(){
+		var selectedValue=$(this).val();
+	
+	
+	if(selectedValue=="Select")
+		selectedValue="please select required city";
+	
+ 		$("#divResult").html(selectedValue);
+})
+})
+
+</script>
+
+<!-- <script>
+ $(document).ready(function(){
+	var result="";
+	$(".inputRequired").change(function(){
+		if(result=="")
+			{
+			result=$(this).val();
+			}
+		else{
+			result+=","+$(this).val();
+			}
+		$("#divResult").html(result);
+		});
+});
+</script>-->
+
+<script>
+$(document).ready(function(){
+	$('#btn').click(function(){
+		var submittedvalue="success";
+	alert(submittedvalue);
+	})
+})
+</script>
+
+</head>
+
+<body bgcolor="wheat">
+<table border="1" >
+<tr>
+<td>First Name</td>
+<td><input id="txtfn" type="text" class="inputRequired"/></td>
+</tr>
+<tr>
+<td>Last Name</td>
+<td><input id="txtln" type="text" class="inputRequired"/></td>
+</tr>
+<tr>
+<td>city</td>
+<td><select  id="ddlcity" class="inputRequired">
+<option value="Select">Select</option>
+<option value="Banglore">Banglore</option>
+<option value="Tirupati">Tirupati</option>
+<option value="Mysore">Mysore</option>
+</select></td>
+
+<tr>
+<td>Favourite Colour</td>
+<td><input id="radiored" type="radio" name="color" value="Red" class="inputRequired"/>Red
+<input id="radiogreen" type="radio" name="color" value="Green" class="inputRequired"/>Green
+<input id="radioblue" type="radio" name="color" value="Blue" class="inputRequired"/>Blue
+</td>
+</tr>
+
+<tr>
+<td>Contact Method</td>
+<td><input id="chkemail" type="checkbox" value="Email"/>Email
+<input id="chkphone" type="checkbox" value="Phone"/>Phone
+<input id="chkmedia" type="checkbox" value="Social Media"/>Social Media
+</td>
+</tr>
+<tr>
+<td>Comments</td>
+<td><textarea id="txtcomment" class="inputRequired" rows="5" cols="10"></textarea></td>
+</tr>
+
+<tr>
+<td><input id="btn" type="button" value="submit"/></td>
+<td><div id="divResult"></div></td>
+</tr>
+</table>
+</body>
+</html>

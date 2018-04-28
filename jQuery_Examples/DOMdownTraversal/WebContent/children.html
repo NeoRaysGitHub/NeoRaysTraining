@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('button').click(function(){
+		$('li').children().css({"color":"green", "border":"2px solid brown"});
+		//$('ul').parent().css({"color":"green", "border":"2px solid brown"});
+		//$('p').parent().css({"color":"green", "border":"2px solid brown"});
+		//$('div').parent().css({"color":"green", "border":"2px solid brown"});
+		//$('body').parent().css({"color":"green", "border":"2px solid brown"});
+})
+});
+</script>
+
+</head>
+<body>
+<h1>Children Method</h1>
+<div>
+<ul>
+<li><span>Namasthe</span>  <span>Banni</span></li>
+<li><span>Hegidare</span>  <span>Maneli</span>  <b>Ellaru?</b></li>
+</ul>
+
+<ul>
+<li><span>Hi</span>  <span>Hello</span></li>
+<li><span>How</span>  <span>Are</span>  <b>You?</b></li>
+</ul>
+
+<ul>
+<li><span>Namasthalu</span>  <span>Suswagatham</span></li>
+<li><span>Andaru</span>  <span>Ela</span>  <b>Unnaru?</b></li>
+</ul>
+</div>
+
+<div>
+<p>Welcome To Prince Hotel</p>
+</div>
+
+<button>Click here</button>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style type="text/css">
+	.imgStyle
+	{
+	 width:100px;
+	 height:100px;
+	 border:3px solid gray;
+	}
+</style>
+<script>
+$(document).ready(function(){
+	var imageURLs= new Array();
+	var intervalId;
+	var btnStart=$("#btnStartSlideShow");
+	var btnStop=${"#btnStopSlideShow");
+
+$("#divContainer img").each(function(){
+		imageURLs.push($(this).attr("src"));
+		});
+
+function setImage()
+{
+	var mainImgElement=$("#mainImg");
+	var currentImgURL=mainImgElement.attr("src");
+	var currentImgIndex=$.inArray(currentImgURL,imageURLs);
+
+	if(currentImgIndex==(imageURLs.length-1))
+		{
+		currentImgIndex = -1;
+		}
+	mainImgElement.attr("src", imageURLs[currentImgIndex+1])
+	}
+
+btnStart.click(function(){
+	intervalId = setInterval(setImage,500);
+	$(this).attr("disabled","disabled");
+	btnStart.removeAttr("disabled");
+});
+
+btnStop.click(function (){
+	clearInterval(intervalId);
+	$(this).attr("disabled","disabled");
+	btnStart.removeAttr("disabled");
+}).attr("disabled","disabled");
+	
+});
+</script>
+</head>
+<body>
+<input type="button" id="btnStartSlideShow" value="start animation"/>
+<input type="button" id="btnStopSlideShow" value="stop animation"/><br><br><br>
+<img id="mainImg" style="border:3px solid blue" src="images/OQUSg0P.jpg" height="400px" width="400px"/>
+<div id="divContainer">
+<img class="imgStyle" src="images/Chrysanthemum.jpg"/>
+<img class="imgStyle" src="images/Lighthouse.jpg"/>
+<img class="imgStyle" src="images/OQUSg0P.jpg"/>
+<img class="imgStyle" src="images/Penguins.jpg"/>
+</div>
+</body>
+</html>

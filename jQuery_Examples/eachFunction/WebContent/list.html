@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	jQuery('li').each(function(index,element){
+		alert((index)+" : "+$(element).text());
+
+		//alert($(this).text());   // it will not give index
+           
+         // METHOD CHAINING //  
+           
+           //$(this).css('color','red');
+           $("li").css('color','blue');
+         
+           $('li').slideUp(1000); // continuously sliding because it is in each function
+           $('li').slideDown(2000);
+
+		$("li").attr("title","MY TITLE"); // if not also nothing will happen
+   		
+   		/*if($(element).text() == 'UK')
+			{
+			return false;
+			}*/
+	})
+})
+</script>
+</head>
+<body style="font-style:italic" bgcolor="pink">
+<ul>
+	<li>India</li>
+	<li>US</li>
+	<li>UK</li>
+	<li>Nepal</li>
+</ul>
+</body>
+</html>

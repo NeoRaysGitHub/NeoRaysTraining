@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function (){
+	$('div').each(function (){
+		alert($(this).attr('title'));
+
+		/*$('div').attr('title', 'new Title');
+
+	$('div').each(function (){
+		alert($(this).attr('title'));*/
+})
+});
+
+</script>
+</head>
+
+<body>
+
+<div id="div1" title="MY DIV1">DIV1</div>
+<div id="div2" title="MY DIV2">DIV2</div>
+<div id="div3" title="MY DIV3">DIV3</div>
+</body>
+</html>

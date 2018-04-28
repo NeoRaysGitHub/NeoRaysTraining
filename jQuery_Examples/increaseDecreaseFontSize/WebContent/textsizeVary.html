@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#linkIncrease").click(function(){
+		modifyFontSize("increase");
+		});
+	$("#linkDecrease").click(function(){
+		modifyFontSize("decrease");
+		});
+	$("#linkReset").click(function(){
+		modifyFontSize("reset");
+		});
+
+	function modifyFontSize(flag)
+	{
+		var divElement=$("#divContent");
+		var currentFontSize = parseInt(divElement.css("font-size"));
+			if(flag=="increase")
+				currentFontSize +=3;
+			if(flag=="decrease")
+				currentFontSize -=3;
+			if(flag=="reset")
+				currentFontSize =16;
+
+			divElement.css("font-size",currentFontSize);
+		}
+});
+</script>
+</head>
+<body>
+Font-size:
+<a id="linkIncrease" href="#">increase</a>
+<a id="linkDecrease" href="#">decrease</a>
+<a id="linkReset" href="#">reset</a>
+<div id="divContent" class="divClass">
+	<h1>jQuery Tutorial</h1>
+		<ul>
+			<li>introduction</li>
+			<li>datatypes</li>
+			<li>animation</li>
+			<li>size variation</li>
+		</ul>
+</div>
+
+</body>
+</html>

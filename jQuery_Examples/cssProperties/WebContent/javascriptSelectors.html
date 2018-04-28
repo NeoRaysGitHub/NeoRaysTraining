@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+$(document).ready(function(){
+	$('#button1').css('background-color','cyan');
+$('#color').css('background-color','wheat');
+$('#button2').css('background-color','brown');
+$('#button1').mouseover(function(){
+	
+		alert("This is example of selectors");
+	if($('#button2').length>0)
+		{
+		alert("element found");
+		}
+	else
+		{
+		alert("element not found");
+		}
+		})
+$('#button2').click(function(){
+	$('p').css('background-color','yellow');
+	$('#div1').css('color','violet');
+})
+});
+
+
+
+</script>
+
+<p id="color">This is Paragraph</p>
+<div id="div1">It is in div Tag</div><br>
+<input type="button" id="button1" value="click"/>
+<input type="button" id="button2" value="click here"/>
+</body>
+</html>

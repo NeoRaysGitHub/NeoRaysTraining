@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+   .imgstyle
+   {
+   height:100px;
+   width:100px;
+  border:4px solid grey;
+   }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+$("#div1 img").on({
+	mouseover:function(){
+		$(this).css({
+			"cursor":"pointer",
+			 "border-color":"red"
+			});
+			},
+	mouseout:function(){
+		$(this).css({
+			"cursor":"default",
+			"border-color":"grey"
+				});
+			},
+	click:function(){
+		var imgurl=$(this).attr("src");
+		$("#img1").fadeOut(500, function(){
+			$(this).attr("src",imgurl);
+		}).fadeIn(500);
+		}
+})	
+});
+</script>
+</head>
+<body>
+<img id="img1" src="images/Jellyfish.jpg" height="500px" width="510px" style="border:3px solid yellow"/>
+<div id="div1">
+<img   src="images/Jellyfish.jpg" class="imgstyle"/>
+<img  class="imgstyle" src="images/Hydrangeas.jpg"/>
+<img  class="imgstyle" src="images/Desert.jpg"/>
+<img  class="imgstyle" src="images/OQUSg0P.jpg"/>
+<img  class="imgstyle" src="images/Tulips.jpg"/>
+</div>
+</body>
+</html>

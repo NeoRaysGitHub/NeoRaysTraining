@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('button').click(function(){
+	    $('p').siblings().css({"color":"red", "border":"2px solid blue"});
+	    //$('b').siblings().css({"color":"red", "border":"2px solid blue"});
+		//$('li').siblings().css({"color":"red", "border":"2px solid blue"});
+		//$('ul').siblings().css({"color":"red", "border":"2px solid blue"});
+		//$('div').siblings().css({"color":"red", "border":"2px solid blue"});
+		//$('span').siblings("b").css({"color":"red", "border":"2px solid blue"});
+		//$('b').siblings("span").css({"color":"red", "border":"2px solid blue"});
+		
+		//$('span').next().css({"color":"yellow", "border":"2px solid red"});
+		//$('li').next().css({"color":"yellow", "border":"2px solid red"});// if same also first match next it will consider
+		
+		//$('li').nextAll().css({"color":"yellow", "border":"2px solid red"});
+		
+})
+});
+</script>
+
+</head>
+
+<body bgcolor="green">
+<h1>Siblings Example</h1>
+<div>
+<ul>
+<li><span>Namasthe</span>  <span>Banni</span></li>
+<li><span>Hegidare</span>  <span>Maneli</span>  <b>Ellaru?</b></li>
+</ul>
+
+<ul>
+<li><span>Hi</span>  <span>Hello</span></li>
+<li><span>How</span>  <span>Are</span>  <b>You?</b></li>
+</ul>
+
+<ul>
+<li><span>Namasthalu</span>  <span>Suswagatham</span></li>
+<li><span>Andaru</span>  <span>Ela</span>  <b>Unnaru?</b></li>
+</ul>
+
+</div>
+
+<div>
+<p>Welcome To Prince Hotel</p>
+<p>Welcome To Prince Mall</p>
+<p>Welcome To Prince Home</p>
+<b>Siblings finding</b>
+</div>
+<button>Click here</button>
+
+</body>
+</html>

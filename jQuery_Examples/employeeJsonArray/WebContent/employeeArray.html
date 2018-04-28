@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+
+"use strict"
+
+$(document).ready(function(){
+	var employee=[
+	    {
+			"firstName" : "John",
+			"lastName" : "Codd",
+			"gender" : "male",
+			"salary" : 50000
+		},
+		{
+			"firstName" : "Gavin",
+			"lastName" : "King",
+			"gender" : "male",
+			"salary" : 70000
+		},
+		{
+			"firstName" : "Medom",
+			"lastName" : "Querie",
+			"gender" : "female",
+			"salary" : 300000
+		}
+		];
+
+	var result=JSON.stringify(employee);
+	$("#div").html(result);
+
+	/*$("#div").html(employee[0].firstName);
+	$("#div").html(employee[1].firstName);
+	$("#div").html(employee[2].firstName);/*
+
+
+	/*var jsonString=JSON.parse(employee);
+	var result="";
+
+	$.each(jsonString, function(i,item)){
+		result +="FirstName = "+item.firstName+"<br/>";
+		result +="LastName = "+item.lastName+"<br/>";
+		result +="Gender = "+item.gender+"<br/>";
+		result +="Salary = "+item.salary+"<br/>";
+		});
+
+	$('#div').html(result);*/
+	
+});
+
+</script>
+
+<div id="div"></div>
+</body>
+</html>

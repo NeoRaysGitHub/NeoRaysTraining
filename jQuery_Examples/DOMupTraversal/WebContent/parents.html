@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('button').click(function(){
+		$('span').parents().css({"color":"red", "border":"2px solid blue"});
+		//$('li').parent().css({"color":"red", "border":"2px solid blue"});
+		//$('div').parent().css({"color":"red", "border":"2px solid blue"});
+		//$('p').parents().css({"color":"red", "border":"2px solid blue"});
+		
+})
+});
+</script>
+
+<div>
+<ul>
+<li><span>Namasthe</span>  <span>Banni</span></li>
+<li><span>Hegidare</span>  <span>Maneli</span>  <b>Ellaru?</b></li>
+</ul>
+
+<ul>
+<li><span>Hi</span>  <span>Hello</span></li>
+<li><span>How</span>  <span>Are</span>  <b>You?</b></li>
+</ul>
+
+<ul>
+<li><span>Namasthalu</span>  <span>Suswagatham</span></li>
+<li><span>Andaru</span>  <span>Ela</span>  <b>Unnaru?</b></li>
+</ul>
+
+</div>
+<div>
+<p>Welcome To Prince Hotel</p>
+</div>
+<button>Click me</button>
+
+</body>
+</html>
