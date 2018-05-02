@@ -1,0 +1,11 @@
+import React from 'react';
+const User = (props) => {
+  let age = props.age ? props.age :'NA';
+  if(props.children){
+      return (<div>Name: {props.children},Age: {props.age}</div>)
+  }else {
+    return <div> Invalid</div>
+  }
+
+}
+export default User;
