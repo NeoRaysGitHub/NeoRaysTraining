@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+			$(document).ready(function(){
+				$('#butnSubmit').click(function(){
+					var result=$('input[type="checkbox"]:checked');
+					if(result.length>0){
+						var resultString=result.length+" checkboxs chesked </br>";
+						
+
+							result.each(function(){
+							resultString += $(this).val()+"</br>"
+							
+							});
+							$('#divResult').html(resultString);
+						}else{
+							$('#divResult').html("Skill is not checked")
+
+							}
+					});
+
+			});
+		</script>
+</head>
+<body style="font-family: Arial">
+	Checked:
+	<input type="checkbox" name="skille" value="Java">Java
+	<input type="checkbox" name="skille" value="jquery">jquery
+	<input type="checkbox" name="skille" value=".net">.net
+	<input type="checkbox" name="skille" value="C#">C#
+	<br></br>
+	<input id="butnSubmit" type="submit" value="submit">
+	<br></br>
+	<div id="divResult">
+	
+	</div>
+</body>
+</html>

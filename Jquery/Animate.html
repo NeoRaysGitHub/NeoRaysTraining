@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script src="C:\MyJar\jquery-3.3.1.js"></script>
+        <script src="C:\MyJar\jquery-ui-1.12.1"></script>
+      
+        <script type="text/javaScript">
+            $(document).ready(function () {
+                var togcolor=false;
+                $('#btn').click(function(){
+                        var divelement=$('#divid');
+                        if (togcolor) {
+                            divelement.animate({
+                                'font-size' : '25',
+                                'border-width' : '1',
+                                'background-color' : 'red',
+                                'color' : 'white',
+                                'border-color' : 'green'
+
+                            });
+                        } 
+                        else{
+                            divelement.animate({
+                                'font-size' : '30',
+                                'border-width' : '5',
+                                'background-color' : 'green',
+                                'color' : 'white',
+                                'border-color' : 'red'
+                            });
+                        }
+                        togcolor = !togcolor;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <form id="foem12">
+            <div id="divid" style="width: 500px; border: 1px solid black; padding: 5px; font-size: 15px">
+                Includes: core.js, widget.js, mouse.js, draggable.js, droppable.js, resizable.js,
+                 selectable.js, sortable.js, effect.js, data.js, disable-selection.js, escape-selector.js,
+            </div>
+            <br>
+            <input type="button" id="btn" value="Animate"/>
+        </form>
+    </body>
+</html>

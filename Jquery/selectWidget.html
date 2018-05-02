@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <script src="C:\MyJar\jquery-3.3.1.js"></script>
+    <script src="C:\MyJar\jquery-ui-1.12.1\jquery-ui-1.12.1"></script>
+    <link href="jquery-ui.css" rel="stylesheet"/>
+    <script type="text/javaScript">
+                $(document).ready(function () {
+                    $('#selectDay').selectable();
+                });
+            </script>
+    <style>
+        li {
+            display: inline-block;
+            padding: 20px;
+            border: 1px solid black;
+            cursor: pointer;
+            background-color: blue;
+            color: red;
+        }
+
+        .ui-selected {
+            background-color: green;
+            color: gold;
+        }
+    </style>
+</head>
+
+<body style="font-family: Arial">
+    <form id="form66">
+        <ul id="selectDay">
+            <li>Mon</li>
+            <li>The</li>
+            <li>Wed</li>
+            <li>Thu</li>
+            <li>Fri</li>
+            <li>Sat</li>
+            <li>Sun</li>
+        </ul>
+        </br>
+        Your Selected Value:
+        <div id="result"></div>
+    </form>
+</body>
+
+</html>
