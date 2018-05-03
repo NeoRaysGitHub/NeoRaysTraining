@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.js"></script>
+<script type="text/javascript">
+$('img[src="help.png"]').mouseover(function(){
+
+	$('#' + getDivId(this)).fadeIn(500);
+}).mouseout(function(){
+	$('#' + getDivId(this)).fadeOut(500);
+});
+function getDivId(helpIcon){
+	var helpInconId = $(helpIcon).attr('id');
+	return helpInconId.replace('img','div');
+}
+});
+</script>
+</head>
+<body>
+First Name <input type="text"  id="firstname"/><img name="helpIcon"id="imghelpimg" src="help.png">
+<div id="divfirstname" style="display: none">firstname</div><br>
+Last Name <input type="text" id="secondname"/><img id="imghelpimg" src="help.png">
+<div id="divsecondname" style="display: none">secondname</div><br>
+city <select style=" width : 70px;" id="city"></select><img id="imghelpimg" src="help.png">
+<div id="divcity" style="display: none">city</div><br>
+Favourite Color <input type="radio" value="red"/><input type="radio" value="red"/>
+<img alt=" " src="help.png">
+</body>
+</html>
