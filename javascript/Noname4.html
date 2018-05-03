@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+</HEAD>
+
+<BODY>
+
+Enter First Number <input type="text" id="no1"><br>
+Enter Second Number <input type="text" id="no2"><br>
+
+
+<span id="aaa"></span>
+
+<script>
+var  a=document.getElementById("no1").value;
+var b=document.getElementById("no2").value;
+var c=parseInt(a);
+var d=parseInt(b);
+function add()
+{
+c=c+d
+//alert(c);
+document.getElementById('aaa').innerHTML = c;
+}
+
+function sub()
+{
+var a=document.getElementById("no1").value;
+var b=document.getElementById("no2").value;
+a=parseInt(a)-parseInt(b);
+//alert(c);
+document.getElementById('aaa').innerHTML = a;
+}
+function di()
+{
+var a=document.getElementById("no1").value;
+var b=document.getElementById("no2").value;
+a=parseInt(a)+parseInt(b);
+//alert(c);
+document.getElementById('aaa').innerHTML = a;
+}
+</script>
+<button onclick="add()" >Add</button>
+<button onclick="" >Sub</button>
+<button onclick="" >Mul</button>
+<button onclick="" >Div</button>
+
+</BODY>
+</HTML>

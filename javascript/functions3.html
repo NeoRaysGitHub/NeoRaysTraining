@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<script>
+function myfunction(color){
+var elem = document.getElementById("demo");
+elem.style.color=color;
+}
+</script>
+</HEAD>
+
+<BODY>
+<table border=5>
+<tr><td>
+<p id="demo">Wanna Change Color Click</p></td></tr>
+</table>
+<table>
+<tr><td>
+<button onclick="myfunction('blue');" color=blue>blue</button></td>
+<td><button onclick="myfunction('green');">green</button></td>
+<td><button onclick="myfunction('hotpink');">pink</button></td>
+<td><button onclick="myfunction('red');">red</button></td>
+</tr>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<script>
+function myfunction(){
+var person={
+firstname:"neorays",
+lastname:"software",
+age:"22",
+eyecolor:"brown"
+};
+document.getElementById("demo").innerHTML=person.firstname+" "+person.lastname+" ";
+document.getElementById("param").innerHTML="WELCOME TO"+person.firstname+" "+person.lastname+" ";
+
+}
+</script>
+</HEAD>
+
+<body>
+<button id="demo" value="click" onclick="myfunction()"/>
+
+
+<button onclick="myfunction()">click</button>
+
+
+<p id="param">plz..click the button</p>
+</body>
+</HTML>
