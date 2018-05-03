@@ -1,0 +1,25 @@
+<html>
+
+
+
+<body>
+</body>
+
+Name : <input type="text" id="abc" onblur="onb()" onfocus="onf()"/>
+
+<script type="text/javascript">
+function onb()
+{
+var x=document.getElementById("abc").style.color="blue";
+x.value=x.value.toUpperCase();
+	}
+function onf()
+{
+document.getElementById("abc").style.color="red";
+
+	}
+
+</script>
+
+</body>
+</html>
