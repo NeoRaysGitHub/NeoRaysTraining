@@ -1,0 +1,27 @@
+var $select = $("<select></select>");
+
+$("#mainmenu").append($select);
+
+$select.change(function (){
+	console.log("appennding");
+	window.location = $select.val();
+});
+
+
+
+$("#mainmenu a").each(function(){
+	
+var $option = $("<option></option>");
+console.log("for each");
+$option.val($(this).attr("href"));
+$option.text($(this).text());
+
+if($(this).parent().hasClass("selected"))
+	{
+		$option.prop("selected",true);
+	}
+
+	$select.append($option);
+
+});
+
