@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+    $("#btn2").click(function(){
+        $("em").before("<b>Before</b>");
+    });
+    
+
+    $("#btn1").click(function(){
+        $("#pid").after("<i>After</i>");
+    });
+});
+
+</script>
+</head>
+<body>
+<em>This is emphasis tag....()</em>
+<button id="btn2">Insert before</button>
+<p id="pid"> This is a paragraph tag</p>
+<button id="btn1">Insert after</button>
+
+</body>
+</html>
