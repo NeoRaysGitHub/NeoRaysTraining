@@ -1,0 +1,26 @@
+[
+{
+"name":"barky",
+"species":"dog",
+"foods" : {
+	"likes" : ["jam"],
+	"dislikes" : ["carrots"]
+	}
+},
+{
+"name":"ruby",
+"species":"pigeon",
+"foods":{
+"likes" : ["peas"],
+	"dislikes" : ["meat"]
+	}
+},
+{
+"name":"pretty",
+"species":"cat",
+"foods":{
+"likes" : ["milk"],
+	"dislikes" : ["fruits"]
+	}
+}
+]
