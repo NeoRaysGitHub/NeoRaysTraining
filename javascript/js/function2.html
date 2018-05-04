@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="demo"></p>
+<script type="text/javascript">
+/* function myfunction(a,b,c){
+   return a*b;
+	}
+	/* var x=myfunction(5,5)*3 */
+//document.getElementById("demo").innerHTML=myfunction(5,5); */
+var person={
+		name:"bharat",
+		addr:"BTM 1st Stage",
+		mail:"bharat@bharat.com",
+		id:123,
+		nameAddre : function(){
+               return this.name+"  "+this.addr;
+			}
+}
+       document.getElementById("demo").innerHTML=person.nameAddre();
+</script>
+
+</body>
+</html>

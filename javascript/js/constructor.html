@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="demo">Detail of a person</p>
+
+<script type="text/javascript">
+function person(name,phone,addr,mail){
+this.name=name;
+this.phone=phone;
+this.addr=addr;
+this.mail=mail;
+	
+}
+
+var text="";
+var x;
+var mydetail = new  person("bharat",95521315654,"BTM 1st atage","bharat@bharat.com");
+
+/* document.getElementById("demo").innerHTML="My phone is  "+ mydetail.phone; */
+ 
+ for(x in mydetail){
+ text+ =mydetail[x]+"  ";	
+}
+document.getElementById("demo").innerHTML=text;
+ 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function validate(){
+var txt="";
+if (document.getElementById("numb").validity.rangeOverflow) {
+    txt = "Value too large";
+}
+else{
+	txt="input is ok";
+}
+    	document.getElementById("demo").innerHTML=txt;
+}
+
+</script>
+</head>
+<body>
+<input id="numb" type="number" max="300"/>
+<button onclick="validate()">Ok</button>
+<p id="demo"></p>
+</body>
+</html>
