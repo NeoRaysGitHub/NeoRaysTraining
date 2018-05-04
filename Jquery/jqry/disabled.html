@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+	<script type="text/javascript">
+$(document).ready(function(){
+	/* $('input[type="text"]:disabled').css('border','3px solid red'); */
+	$('textarea:enabled').css('border','3px solid red');
+});
+	</script>
+</head>
+<body>
+<table>
+<tr>
+<td>First Name : </td>
+<td><input type="text" name="name"  disabled="disabled"></td></tr><br>
+<tr><td>Last Name :</td>
+<td><input type="text" name="lastname" disabled="disabled"></td></tr><br>
+<tr><td>Email :</td>
+<td><input type="text" name="email" ></td></tr><br>
+<tr><td>Gender : </td></tr><br>
+<tr><td></td><td><select id="selectgender"  disabled="disabled"><br>
+<option >MALE</option>
+<option>FEMALE</option>
+</select></td></tr><br>
+<tr><td>Comment :</td></tr><br>
+<tr><td></td><td><textarea></textarea></td></tr>
+<tr><td></td><td><input type="submit" value="submit"   disabled="disabled"></td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+	<script type="text/javascript">
+ $(document).ready(function(){
+       /*  $('#btnforSkills').css('background-color','red').click(function(){ */
+        $('input[name="gender"]').css('background-color','red').click(function(){
+                var result=$('input[type="radio"]:checked');
+                if(result.length>0){
+                        $('#divResult').html(result.val()+"  Is selected....!!!!!!");
+                    }
+                else{
+                	 $('#divResult').html("CheckBox Is Not selected....!!!!!!");
+                    }
+            });
+	  });  
+ $(document).ready(function (){
+	 /* $('#btnforSkills').click(function (){ */
+	 $('input[name="skills"]').click(function (){
+		 getSelectedCheckBoxes('skills');
+        });
+	/*  $('#btnforCountries').css('background-color','cyan').click(function (){ */
+	 $('input[name="countries"]').css('background-color','cyan').click(function (){
+		 getSelectedCheckBoxes('countries');
+     });
+	 var getSelectedCheckBoxes = function (groupName) {
+         var result = $('input[name="' + groupName + '"]:checked');
+         if (result.length > 0) {
+            var resultString =""/*result.length + " checkboxe(s) checked<br>" */; 
+             result.each(function () {
+                 var selectedValues=$(this).val();
+                 resultString += selectedValues+"----"+$('label[for="cb-'+selectedValues+'"]').text() +"<br>";
+             });
+             $('#div' + groupName).html(resultString);
+         }
+         else {
+             $('#div' + groupName).html("No checkbox checked");
+         }
+       };
+    });
+ $(document).ready(function(){
+     $('input:even').css('background-color','red'); 
+    $('input:odd').css('background-color','green');  
+ });
+ 
+ </script>
+</head>
+<body>
+ SELECT:  <br><br>
+<input type="radio" value="MALE" name="gender"  >Male
+<input type="radio" value="FEMALE" name="gender">Female
+ <div id="divResult"></div><br><br>
+SKILLS:<br><br>
+ <input type="checkbox" value="jv" name="skills"/>
+ <label for="cb-jv">JAVA</label>
+ <input type="checkbox" value="nt" name="skills">
+ <label for="cb-nt">.NET</label>
+ <input type="checkbox" value="ph" name="skills">
+ <label for="cb-ph">PHP</label>
+ <input type="checkbox" value="py" name="skills"><br><br>
+ <label for="cb-py">PYTHON</label>
+ <div id="divskills"></div><br>
+ 
+  Preferred Countries:<br><br>
+ <input type="checkbox" value="in" name="countries"/>
+ <label for="cb-in">INDIA</label>
+ <input type="checkbox" value="us" name="countries">
+ <label for="cb-us">US</label>
+ <input type="checkbox" value="uk" name="countries">
+ <label for="cb-uk">UK</label>
+ <input type="checkbox" value="ua" name="countries"><br><br>
+ <label for="cb-ua">UAE</label>
+ <div id="divcountries"></div>
+
+</body>
+</html>

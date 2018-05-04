@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+<script type="text/javascript">
+$(document).ready(function(){
+var employeeJSON =  {
+	     "firstName":"Bharat",
+	     "lastName":"Ahirwar",
+	     "gender":"Male",
+	     "salary":50000	
+};
+
+ var resultString='';
+ resultString+="FirstName  ="+employeeJSON.firstName+"<br>"  ;
+ resultString+="LastName  ="+employeeJSON.lastName+"<br>"  ;
+ resultString+="Gender  ="+employeeJSON.gender+"<br>"  ;
+ resultString+="Salary  ="+employeeJSON.salary+"<br>"  ;
+
+ $('#divresult').html(resultString);
+});
+ 
+</script>
+</head>
+<body>
+<div id="divresult"></div>
+</body>
+</html>
