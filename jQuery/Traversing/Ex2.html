@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("p").children().css({"color": "cyan", "border": "2px solid green"});
+});	
+</script>
+</head>
+<body>
+
+	<div class="descendants" style="width: 500px;">
+		div (Parent element)
+		<p>
+			p (child) <span>span (grandchild)</span>
+		</p>
+		<p>
+			p (child) <span>span (grandchild)</span>
+		</p>
+	</div>
+</body>
+</html>

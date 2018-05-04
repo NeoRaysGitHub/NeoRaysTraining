@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var employeeJSON=[
+				{
+				"firstName":"Hari",
+				"lastName":"Shankar",
+				"gender":"Male",
+				"salary":10000
+				},
+				{
+				"firstName":"Suresh",
+				"lastName":"Kumar",
+				"gender":"male"
+				}
+			 	];
+	
+			$("#d1").html(employeeJSON[0].firstName);
+				
+
+	});
+</script>
+</head>
+<body style="font-family: arial">
+<h3>JSON Arrays</h3>
+	<div id="d1"></div>
+</body>
+</html>

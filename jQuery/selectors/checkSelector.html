@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script>
+	$(document).ready(function(){
+		$('#btnSubmit').click(function(){
+			
+			var result=$('input[type="radio"]:checked');
+			
+			if (result.length > 0) {
+				$('#divResult').html(result.val()+"  is checked.")
+			}else{
+				$('#divResult').html("No radio button checked");
+				}
+	
+		});		
+
+	}); 
+
+</script>
+</head>
+<body style="font-family: Arial">
+<input type="radio" name="gender" value="Male">Male
+<input type="radio" name="gender" value="Female">Female
+<br><br>
+<input id="btnSubmit" type="submit" value="submit"/>	
+<div id="divResult"></div>
+</body>
+</html>
