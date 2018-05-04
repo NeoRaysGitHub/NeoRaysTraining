@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("p").on({
+        mouseenter: function(){
+            $(this).css("background-color", "cyan");
+        },  
+        mouseleave: function(){
+            $(this).css("background-color", "green");
+        }, 
+        click: function(){
+            $(this).css("background-color", "red");
+        }  
+    });
+});
+
+</script>
+</head>
+<body>
+<h2><p>Neo rays software</p></h2>
+</body>
+</html>
