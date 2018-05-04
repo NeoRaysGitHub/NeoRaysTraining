@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="person" class="com.indian.Person">
+		<property name="pid" value="101"></property>
+		<property name="name" value="bharath"></property>
+
+		<property name="hobbies">
+			<list>
+				<value>playing chess</value>
+				<value>reading Books</value>
+
+			</list>
+		</property>
+
+		<property name="emails">
+			<list>
+				<value>bharath@gmail.com</value>
+				<value>bharath@jlc.com</value>
+
+			</list>
+
+		</property>
+
+		<property name="phones">
+			<set>
+				<value>111111</value>
+				<value>99089505789</value>
+
+			</set>
+		</property>
+
+		<property name="education">
+			<map>
+				<entry key="graduation" value="MCA"></entry>
+				<entry key="postgraduation" value="B.Sc"></entry>
+
+			</map>
+		</property>
+
+		<property name="percentage">
+			<props>
+				<prop key="Bsc">80</prop>
+				<prop key="MCA">77</prop>
+			</props>
+
+		</property>
+	</bean>
+</beans>
