@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+/* $(document).ready(function(){
+	var intArray=[1,2,3,4,5];
+
+	function functionA(index,element)
+	{
+	return element*10;
+		}
+	function functionB(element,index)
+	{
+	return element*10;
+	}
+	var result1=$.each(intArray,functionA);
+	var result2=$.map(intArray,functionB);
+	document.write('each='+result1);
+	document.write('<br/>')
+	document.write('each='+result2);
+}); */
+//difference between each and map
+$(document).ready(function(){
+
+var intArray=[1,2,3,4,5];
+$.each(intArray, function(index,element){
+	if(element==3)
+		return false;
+document.write(element+',');
+});
+document.write('<br/>')
+$.map(intArray, function(element,index){
+	if(element==3)
+		return false;
+	document.write(element+',');
+	});
+	});
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="font-family:Arial">
+
+</body>
+</html>

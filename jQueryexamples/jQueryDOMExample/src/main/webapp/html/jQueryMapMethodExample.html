@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+/* $(document).ready(function(){
+	var result=[];
+	$('li').each(function(index,element){
+	result.push($(element).text());
+		});
+	alert(result);
+}); */
+$(document).ready(function(){
+	alert($('li').map(function (index, element){
+	return $(element).text());
+		}).get());
+});
+</script>
+</head>
+<body style="font-family:Arial">
+<ul>
+	<li>US</li>
+	<li>india</li>
+	<li>america</li>
+	<li>canada</li>
+	<li>new zealand</li>
+	
+</ul>
+
+</body>
+</html>

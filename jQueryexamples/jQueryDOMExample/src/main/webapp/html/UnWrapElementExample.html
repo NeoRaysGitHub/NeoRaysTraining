@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.containerDiv{
+ background-color:red;
+ color:white;
+ font-weight:bold;
+ margin:3px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+<%  %><%  %>
+	$('div').wrap('<div class="containerDiv"></div>')
+	$('div').unwrap();
+
+});
+</script>
+</head>
+<body style="font-family:Arial">
+<div id="div1">
+div1
+</div>
+<div id="div2">
+div2
+</div>
+<div id="div3">
+div3
+</div>
+</body>
+</html>

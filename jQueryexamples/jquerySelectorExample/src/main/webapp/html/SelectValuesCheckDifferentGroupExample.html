@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	
+	$('#btnGetSelectedSkills').click(function(){ 
+		getCheckedCheckBoxes('skills');
+	});
+
+	$('#btnGetSelectedCities').click(function(){ 
+		getCheckedCheckBoxes('cities');
+	});
+
+	var getCheckedCheckBoxes=function(groupName){
+		var result=$('input[name="'+groupName+'"]:checked');
+		if(result.length>0){
+			var resultString=result.length+"checkboxes checked<br/>";
+			result.each(function(){
+				resultString+=$(this).val()+"<br/>";
+				});
+			$('#div'+groupName).html(resultString);
+			}
+		else{
+			$('#div'+groupName).html("no checkboxs checked");
+			}
+	};
+
+});
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="font-family:Arial">
+Skill:
+	<input type="checkbox" name="skills" value="JavaScript">JavaScript
+	<input type="checkbox" name="skills" value="sql">sql
+	<input type="checkbox" name="skills" value="jdbc">jdbc
+	<input type="checkbox" name="skills" value="servlets">servlets
+	<br/>
+	<br/>
+	preferred cities:
+	<input type="checkbox" name="cities" value="new york"/>new york
+	<input type="checkbox" name="cities" value="New Delhi"/>delhi
+	<input type="checkbox" name="cities" value="banglore"/>banglore
+	<br/><br/>
+	<input id="btnGetSelectedSkills" type="submit" value="Get Selected Skills"/>
+		<input id="btnGetSelectedCities" type="submit" value="Get Selected cities"/>
+	<br/><br/>
+	<div id="divskills"></div>
+	<br/>
+	<br/>
+	
+	<div id="divcities"></div>
+</html>

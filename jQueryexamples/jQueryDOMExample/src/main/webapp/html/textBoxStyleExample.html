@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+.textBoxStyle{ 
+background-color:green;
+color:white;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+$('input[type="text"]').each(function(){
+	$(this).focus(function(){
+$(this).addClass('textBoxStyle');
+		});
+	 $(this).blur(function(){
+		$(this).removeClass('textBoxStyle');
+				}); 
+});
+});
+</script>
+</head>
+<body style="font-family:Arial">
+<p>indian institute of technology</p>
+<table>
+		<tr>
+		<td>
+		First Name
+		</td>
+		<td><input type="text"/></td>
+		</tr>
+		<tr><td>
+		LastName
+		</td>
+		<td><input type="text"/></td>
+		</tr>
+		<tr>
+		<td>
+		Gender
+		</td>
+		<td>
+		<select> 
+		<option value="select">please select</option>
+		<option value="male">Male</option>
+		<option value="female">feMale</option>
+		</select>
+		</td>
+		</tr>
+		<tr><td>
+		Email
+		</td>
+		<td><input type="text"/></td>
+		</tr>
+		<tr>
+		
+</table>
+
+</body>
+</html>

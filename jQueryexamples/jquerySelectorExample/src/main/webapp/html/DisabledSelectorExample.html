@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+	//$(':disabled').css('border', '3px solid red');
+	//$('input:disabled').css('border', '3px solid red');
+
+	$('input:disabled').css('border', '3px solid red');
+});
+
+
+
+</script>
+</head>
+<body style="font-family:Arial">
+<table>
+	<tr>
+		<td>First Name</td>
+		<td><input type="text" disabled="disabled"/></td>
+	</tr>
+		
+	<tr>
+		<td>last name</td>
+		<td><input type="text" disabled="disabled"/></td>
+	</tr>
+		
+	<tr>
+		<td>last name</td>
+		<td><input type="text"/></td>
+	</tr>
+	<tr>
+		<td>Gender</td>
+		<td>
+			<select id="selectGender" disabled="disabled">
+				<option value="Male">Male</option>
+				<option value="Female">Female</option>
+				
+			
+			</select>
+			</td>
+			</tr>
+		<tr>
+			<td>Comments</td>
+			<td><input type="text"/>
+			</td>
+		</tr>
+		<tr>
+		<td>
+		<input type="submit" value="submit"/>
+		</td>
+		</tr>
+</table>
+</body>
+</html>

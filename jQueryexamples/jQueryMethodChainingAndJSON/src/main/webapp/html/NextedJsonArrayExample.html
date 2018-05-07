@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var employeeJSON={
+			"bharath":{
+		"firstName":"bharathkumar",
+		"lastName":"chennuru",
+		"gender":"male",
+		"salary":65000
+	},
+	
+	"reddy":{
+	"firstName":"reddy",
+	"lastName":"chennuru",
+	"gender":"male",
+	"salary":6599
+	}
+
+};
+$('#divResult').html(employeeJSON.bharath.lastName);
+});
+</script>
+</head>
+<body style="font-family:Arial">
+<div id="divResult"></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+var JsObject={
+		'nagachaitanya':'samanta',
+		'surya':'jyothika',
+		'anjineyulu reddy':'chiitti',
+		'bharath kumar':'------'
+};
+ var result='';
+ $.each(JsObject, function(key, value){
+
+		result+='Index='+key+',value='+value+'<br/>';		
+	 });
+ $('#resultDiv').html(result);
+	/* var result="";
+	var intArray=[100,200,300,600,677];
+	$.each(intArray,function( index,element){
+result+='index='+index+',value='+element+'<br/>';
+		});
+	$('#resultDiv').html(result); */
+	
+/* $('li').each(function (index, element){
+	result+='Index='+ index +', value= '+$(element).text()+'<br/>'; //element is raw dom element>>to convert raw dom element to jquery object use$()
+	
+});
+$('#resultDiv').html(result);
+	 */
+	 
+});
+</script>
+
+</head>
+<body style="font-family:Arial">
+<ul>
+	<li>US</li>
+	<li>Indian</li>
+	<li>UK</li>
+	
+	<li>european</li>
+	
+	<li>africa</li>
+</ul>
+<div id="resultDiv"></div>
+</body>
+</html>

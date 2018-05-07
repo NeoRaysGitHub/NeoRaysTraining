@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	//$('div[title][style]').css('border','5px solid black');
+
+	//$('div[title],[style]').css('border','5px solid black');// or conditon// find all elements either tittle  or s style 
+	
+	$('div[title="divTitle"][style="background-color:green"]').css('border','5px solid black');
+});
+</script>
+</head>
+<body>
+	<div title="divTitle" style="background-color:red">
+	REd	DIV
+	</div>
+	<br/>
+<div title="divTitle" style="background-color:green">
+greeen div
+</div>
+
+<br/>
+<div title="divTitle">
+Normal Div
+</div>
+<br/>
+<div >normal dive without any attribute</div>
+</body>
+</html>

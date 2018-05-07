@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var employeeJSON=[{
+		"firstName":"bharathkumar",
+		"lastName":"chennuru",
+		"gender":"male",
+		"salary":65000
+	},
+	{
+	"firstName":"reddy",
+	"lastName":"chennuru",
+	"gender":"male",
+	"salary":6599
+	},
+	{
+		"firstName":"sunitha",
+		"lastName":"nadharapu",
+		"gender":"Female",
+		"salary":60000008
+		}
+	];
+	var result= JSON.stringify(employeeJSON);
+	$('#divResult').html(result);
+});
+</script>
+</head>
+<body style="font-family:Arial">
+<div id="divResult"></div>
+</body>
+</html>

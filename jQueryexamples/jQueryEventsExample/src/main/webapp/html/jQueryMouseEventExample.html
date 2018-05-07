@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	/* $('#ddlCity').change(function(){
+          var selectedValue=$(this).val();
+		if(selectedValue=='Select')
+			selectedValue='please select value';
+          $('#divResult').html(selectedValue);
+		}); */
+	var result='';
+		$('.inputRequired').change(function(){//$('input').change(function(){
+		if(result=='')
+			{
+				result=$(this).val();
+			}
+		else
+			{
+                 	result+=','+$(this).val();
+			}
+		$('#divResult').html(result);
+		
+		});
+});
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="font-family:Arial">
+<table>
+		<tr>
+			<td>First name</td>	
+			<td style="vertical-align:middle">	
+		<input id="txtFirstName" type="text" class="inputRequired"/>
+		
+		</td>
+		<td><input id="imgFirstNameHelp" src="help.jpg"/></td>
+		<td><div id="divFirstNameHelp" style="display:none">First Nmae shown inthe  image</div>
+		</tr>
+		<tr>
+		<td>last Name</td>		
+		<td><input id="txtLastName" type="text" class="inputRequired"/></td>
+		</tr>
+		<tr>
+			<td>city</td>
+			
+		<td>
+		<select id="ddlCity" class="inputRequired">
+		<option value="Select">Select</option>
+		<option value="New York">New york</option>
+		<option value="London">London</option>
+		<option value="Sydney">Sydney</option>
+		</select>
+		</td>
+		</tr>
+		<tr>
+			<td>Favourite color</td>
+			<td>
+			
+			<input id="radioRed" name="color" type="radio" value="Red" class="inputRequired"/>RED
+				
+			<input id="radioGreen" name="color" type="radio" value="Green" class="inputRequired"/>Green
+				
+			<input id="radioBlue" name="color" type="radio" value="Blue" class="inputRequired"/>Blue
+			</td>
+		</tr>
+		<tr>
+		<td>Contact Method</td>
+		<td>
+			<input id="chkBoxEmail" type="checkbox" value="Email" class="inputRequired"/>Email
+			
+			<input id="chkBoxPhone" type="checkbox" value="phone" class="inputRequired"/>phone
+			
+			<input id="chkBoxSocialMedia" type="checkbox" value="Social Media" class="inputRequired"/>social media
+			</td>
+		</tr>
+		<tr>
+		<td>
+			Comments
+		</td>
+		<td><textarea id="txtComments" class="inputRequired"></textarea>
+		</td>
+		</tr>
+		<tr>
+			<td><input id="btnSubmit" type="button" value="Submit"/></td>
+			<td><div id="divResult"></div>
+		</tr>
+</table>
+
+</body>
+</html>

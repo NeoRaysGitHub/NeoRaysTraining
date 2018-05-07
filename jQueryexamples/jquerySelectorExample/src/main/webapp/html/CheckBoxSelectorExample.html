@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#btnSubmit').click(function(){
+		var result=$('input[type="checkbox"]:checked');
+		if(result.length>0){
+			var resultString=result.length+"checkboxes checked<br/>";
+			result.each(function(){
+				resultString+=$(this).val()+"<br/>";
+				});
+			$('#divResult').html(resultString);
+			}
+		else{
+			$('#divResult').html("no checkboxs checked");
+			}
+		});
+});
+	
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="font-family:Arial">
+Skill:
+	<input type="checkbox" name="skills" value="JavaScript">JavaScript
+	<input type="checkbox" name="skills" value="sql">sql
+	<input type="checkbox" name="skills" value="jdbc">jdbc
+	<input type="checkbox" name="skills" value="servlets">servlets
+	<br/>
+	<br/>
+	<input id="btnSubmit" type="submit" value="submit"/>
+	<br/><br/>
+	<div id="divResult"></div>
+</body>
+</html>

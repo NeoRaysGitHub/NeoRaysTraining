@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+/* 
+	$('[title="div1Title"]').css('border','5px solid orange'); */
+
+
+	//$('div[title!="div1Title"]').css('border','5px solid orange');//value of title attribute must not equals to div1Title 
+
+//	$('div:not([title="div1Title"])').css('border','5px solid orange');//value of title attribute must not equals to div1Title 
+
+//	$('[title*="Title"]').css('border','5px solid orange');//all attributes which contaims the title//[attribute contains selector] 
+	
+	//$('[title~="mySpan"]').css('border','5px solid orange');//attributes contains word select4or
+	//$('[title|="myTitle"]').css('border','5px solid orange');//attributes contains prefix slector//-
+	$('[title^="div"]').css('border','5px solid orange')//find the all attributes which contains the word div
+});
+</script>
+
+</head>
+<body>
+<div title="div1Title">
+div1
+</div>
+<br/>
+<div title="div2Title">
+div2
+</div>
+<p title="myTitle-paragraph">
+this is paragrapho</p>
+<span title="div1Title">
+
+span 1
+</span>
+<br/>
+<br/>
+<span title="Heading as mySpan">
+heading spanm
+</span>
+
+</body>
+</html>

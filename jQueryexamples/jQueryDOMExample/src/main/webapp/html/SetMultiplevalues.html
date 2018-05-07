@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+/* 	var config={
+				'title':'Nwe div title',
+				'style':'border:4px solid blue',
+				'name':'MY Div'
+			};
+		$('div').attr(config); */
+
+		/* $('div').attr({
+				'title':'Nwe div title',
+				'style':'border:4px solid blue',
+				'name':'MY Div'
+			}); */
+			//seting values to attributes using method chaining
+			
+			$('div')
+			.attr('title','New Div Title')
+			.attr('style','border:4px solid red')
+			.attr('name','My Div');
+		var result='';
+		$('div').each(function(){
+				result+='title='+$(this).attr('title')+'<br/>';
+				result+='style='+$(this).attr('style')+'<br/>';
+				result+='name='+$(this).attr('name')+'<br/>';
+			});
+	$('#resultSpan').html(result);
+});
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="font-family:Arial">
+	<div id="div1" title="MY Div1">
+		DIV1
+	</div>
+	<br/>
+	<div id="div2" title="My div2">
+	div2
+	</div>
+	<br/>
+	<span id="resultSpan" ></span>
+</body>
+</html>

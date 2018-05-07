@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+		var result='DIV elements with Title attribute='+$('div[title]').length+'<br/>';
+		result+='removing title attribute<br/>'
+			$('div[title]').removeAttr('title');
+		result+='DIV elements with Tittle attribute='+$('div[title]').length;
+			$('#resultSpan').html(result);
+						});	
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="font-family:Arial">
+	<div id="div1" title="MY DIV1">
+	Div1
+	</div>
+<div id="div2" title="My div2">
+div2
+</div>
+<br/>
+<span id="resultSpan"></span>
+</body>
+</html>

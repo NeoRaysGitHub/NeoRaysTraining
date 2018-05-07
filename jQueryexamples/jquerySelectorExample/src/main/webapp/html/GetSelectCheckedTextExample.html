@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	
+	$('input[name="skills"]').click(function(){ 
+		getCheckedCheckBoxes('skills');
+	});
+
+	$('input[name="cities"]').click(function(){ 
+		getCheckedCheckBoxes('cities');
+	});
+
+	var getCheckedCheckBoxes=function(groupName){
+		var result=$('input[name="'+groupName+'"]:checked');
+		if(result.length>0){
+			var resultString=result.length+"checkboxes checked<br/>";
+			result.each(function(){
+				var selectedValue=$(this).val();
+				
+				resultString+=selectedValue+" - "+$('label[for="cb-'+selectedValue+'"]').text()+"<br/>";
+				});
+			$('#div'+groupName).html(resultString);
+			}
+		else{
+			$('#div'+groupName).html("no checkboxs checked");
+			}
+	};
+
+});
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="font-family:Arial">
+Skill:
+	<input type="checkbox" name="skills" value="js">
+	<label for="cb-js">JavaScript</label>
+	<input type="checkbox" name="skills" value="sq">
+	<label for="cb-sq">sql</label>
+	<input type="checkbox" name="skills" value="jc">
+	<label for="cb-jc">jdbc</label>
+	<input type="checkbox" name="skills" value="srlts">
+	<label for="cb-srlts">servlets</label>
+	<br/>
+	<br/>
+	preferred cities:
+	<input type="checkbox" name="cities" value="ny"/>
+	<label for="cb-ny">new york</label>
+	<input type="checkbox" name="cities" value="nd"/>	
+	<label for="cb-nd">new Delhli</label>
+	<input type="checkbox" name="cities" value="bn"/>
+	<label for="cb-bn">banglore</label>
+	<br/><br/>
+	
+	<div id="divskills">the Selected skill(S):</div>
+	<br/>
+	<br/>
+	
+	<div id="divcities">the SelectedCity(s):</div>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//$('[title]').css('border','5px solid orange');
+	//$('div[title]').css('border','5px solid orange');
+	//$('[title="div1Title"]').css('border','5px solid orange');
+	//$('div[title="div1Title"]').css('border','5px solid orange');
+	$('div[title*="Title"]').css('border','5px solid orange');//all attributes which contaims the title 
+});
+</script>
+</head>
+<body>
+	<div title="div1Title">
+		DIV1
+	</div>
+	<br/>
+<div title="div2Title">
+Div 2
+</div>
+<p title="pTitle">
+this is paragraph
+</p>
+<span title="div1Title">
+Span1
+</span>
+<br/><br/>
+<span>
+span 2
+</span>
+</body>
+</html>

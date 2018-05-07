@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+/* $(document).ready(function(){
+//get the attribute value
+	//alert($('div').attr('title'));//only first matching atribute not all,we hve to use each function to iterate all attritues
+	$('div').each(function(){
+		alert($(this).attr('title'));
+				});
+	
+}); */
+			//set the attribute value
+		/* 	$(document).ready(function(){
+						$('div').attr('title','New div title');
+						$('div').each(function(){
+							alert($(this).attr('title'));
+							});	
+						}); */
+
+
+						$(document).ready(function(){
+							var divs=$('div');
+							divs.each(function(i){
+								$(this).attr('title', 'DIV'+(i+1)+'tiTle')
+							});	
+							divs.each(function(){
+										alert($(this).attr('title'));
+								});
+						});	
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="font-family:Arial">
+	<div id="div1" title="MY DIV1">
+	Div1
+	</div>
+<div id="div2" title="My div2">
+div2
+</div>
+</body>
+</html>
