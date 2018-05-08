@@ -1,0 +1,35 @@
+<html>
+<head>
+ <title>
+</title> 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script type="text/javascript"> 
+    $(document).ready(function () {
+       
+        $('div').each(function (i) {
+            $(this).attr('title', 'div ' + (i + 1) + ' title');
+        });
+
+        
+        $('div').each(function () {
+            alert($(this).attr('title'));
+        });
+    });
+</script>
+ </head>
+
+ <body style="font-family:Arial"> 
+
+<div id="div1" title="My DIV1">
+ DIV 1 
+</div>
+ <div id="div2" title="My DIV2"> 
+ DIV 2 
+</div>
+ </body>
+ </html>
+
+
+
+ 
