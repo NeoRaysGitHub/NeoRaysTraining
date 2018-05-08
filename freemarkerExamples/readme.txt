@@ -1,0 +1,1 @@
+freemarker examples added
