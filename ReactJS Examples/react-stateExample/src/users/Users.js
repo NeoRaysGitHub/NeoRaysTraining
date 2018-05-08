@@ -6,10 +6,10 @@ class Users extends Component {
   state = {
     users: [
       {name:"John", age:20},
-      {name:"Jill", age:30},
-      {name:"Peter", age:80},
-      {name:"bill", age:70},
-      {name:"Jackson", age:50}
+      {name:"ajith", age:30},
+      {name:"john", age:80},
+      {name:"jack", age:70},
+      {name:"peter", age:50}
     ],
     title:"Users List"
   }
