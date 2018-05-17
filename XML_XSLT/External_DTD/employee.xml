@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE employee SYSTEM "D://XML_Practice/External_DTD/employee.dtd">
+<employee>
+	<empno>100</empno>
+	<name>Suresh</name>
+	<salary>1200</salary>
+</employee>

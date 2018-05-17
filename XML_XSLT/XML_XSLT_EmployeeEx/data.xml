@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl" ?>
+<personData>
+	<user id="1">
+		<fname>Hari</fname>
+		<lname>Shankar</lname>
+		<email>hari@gmail.com</email>
+	</user>
+	
+	<user id="2">
+		<fname>Suresh</fname>
+		<lname>Kumar</lname>
+		<email>suresh@gmail.com</email>
+	</user>
+	<user id="3">
+		<fname>Pradeep</fname>
+		<lname>Chanchal</lname>
+		<email>pradeep@gmail.com</email>
+	</user>
+	<user id="4">
+		<fname>Mithilesh</fname>
+		<lname>Manjhi</lname>
+		<email>mithilesh@gmail.com</email>
+	</user>
+	
+</personData>

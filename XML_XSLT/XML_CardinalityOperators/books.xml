@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE books  SYSTEM "D://XML_Practice/XML_CardinalityOperators/books.dtd">
+<books>
+	<book>
+		<name>Spring</name>
+		<price>100</price>
+		<author>Rodjhonson</author>
+		<author>Harishankar</author>
+		<publication>Oracle</publication>
+	</book>
+</books>
