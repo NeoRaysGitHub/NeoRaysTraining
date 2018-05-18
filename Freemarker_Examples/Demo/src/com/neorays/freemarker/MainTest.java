@@ -35,9 +35,9 @@ public class MainTest {
 
     		List<ValueExampleObject> systems = new ArrayList<ValueExampleObject>();
     		systems.add(new ValueExampleObject("Android", "Google"));
-    		systems.add(new ValueExampleObject("iOS States", "Apple"));
+    		systems.add(new ValueExampleObject("iOS", "Apple"));
     		systems.add(new ValueExampleObject("Ubuntu", "Canonical"));
-    		systems.add(new ValueExampleObject("Windows7", "Microsoft"));
+    		systems.add(new ValueExampleObject("Windows", "Microsoft"));
     		input.put("systems", systems);
 
 
