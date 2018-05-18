@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT students (student+)>
+<!ELEMENT student EMPTY>
+<!ATTLIST student studentid CDATA #REQUIRED>
+<!ATTLIST student studentname CDATA #IMPLIED>
+<!ATTLIST student studentcourse CDATA "java">
+<!ATTLIST student studentfee CDATA #FIXED "100">

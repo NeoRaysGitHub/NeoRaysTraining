@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE students SYSTEM "D://XML_Practice/DTD_Attribute/students.dtd">
+<students>
+	<student studentid="101" studentcourse="C" studentfee="100"/>
+	<student studentid="102" studentname="Hari"/>
+	<student studentid="103" studentcourse="java" studentfee="100"/>
+</students>
