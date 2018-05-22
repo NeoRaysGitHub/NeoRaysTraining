@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jquery.min.js"></script>
+    <script !src="">
+    $(document).ready(function () {
+        $(this).on("contextmenu",function (e) {
+            e.preventDefault();
+            $("#divresult").append('rightclicked disable<br/>')
+        });
+    });
+
+    </script>
+</head>
+<body>
+<h3>
+    Right clicked disabled on this page try to click and see what happen
+
+</h3>
+<div id="divresult"></div>
+
+</body>
+</html>

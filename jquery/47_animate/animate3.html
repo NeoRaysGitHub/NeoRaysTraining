@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jquery.min.js"></script>
+    <style>
+        .divclass{
+            width: 150px;
+            padding: 5px;
+            font-size: 18px;
+            border:1px solid black;
+            opacity: 0.4;
+            background-color: red;
+            color: white;
+
+        }
+
+    </style>
+    <script !src="">
+        $(document).ready(function () {
+
+                $("#btn").click(function () {
+                   $.fx.off= $("#chk").is(':checked');
+                    $("#mydiv1")
+
+                        .animate({"width":500},1500)
+                        .queue(function () {
+                            console.log("Queue called "+$(this).queue('fx').length);
+                            $(this).dequeue();
+                        })
+                        .animate({"padding":20},1500)
+                        .animate({"font-size":50},1500)
+                        .animate({"border-width":10},1500)
+                        .animate({"opacity":1},1500)
+                        .queue(function () {
+                            console.log("Queue called "+$(this).queue('fx').length);
+                            $(this).dequeue();
+                        });
+
+
+                        $("#mydiv2")
+                            .animate({"width":500},1500)
+                            .animate({"padding":20},1500)
+                            .animate({"font-size":50},1500)
+                            .animate({"border-width":10},1500)
+                            .animate({"opacity":1},1500)
+                    });
+                });
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+<input type="button" id="btn" value="Start Animation">
+<input type="checkbox" id="chk">TurnOFF Animation
+<br><br>
+
+<div id="mydiv1" class="divclass">Jquery Animation</div>
+<br>
+<div id="mydiv2" class="divclass">Program Tech </div>
+
+</body>
+</html>

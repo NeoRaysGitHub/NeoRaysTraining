@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jquery.min.js"></script>
+
+    <script !src="">
+
+        $(document).ready(function () {
+            $("#btnSubmit").click(function () {
+
+
+            var res=$("input[type='radio']:checked");
+            if(res.length>0){
+                $("#divResult").html(res.val() + " is checked" )
+            }
+            else
+            {
+                $("#divResult").html("no radio selecherd")
+            }
+        });
+        });
+
+    </script>
+</head>
+<body style="font-family:Arial">
+Gender :
+<input type="radio" name="gender" value="Male">Male
+<input type="radio" name="gender" value="Female">Female
+<br /><br />
+<input id="btnSubmit" type="submit" value="submit" />
+<br /><br />
+<div id="divResult">
+</div>
+</body>
+</html>

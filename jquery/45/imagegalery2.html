@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+.img{
+    height: 100px;
+    width: 100px;
+    border: 3px solid grey;
+
+}
+
+    </style>
+    <script src="../../jquery.min.js"></script>
+
+    <script !src="">
+        $(document).ready(function () {
+           var imgurl=new Array();
+            var intervalid;
+            var btnstart=$("#btnstar");
+            var btnstop=$("#btnsto");
+
+            $("#divc img").each(function () {
+                imgurl.push($(this).attr('src'));
+            });
+
+            function setimage() {
+                var  mainimage=$("#main");
+                var currimg=mainimage.attr('src');
+                var currindex=$.inArray(currimg,imgurl);
+                if(currindex==(imgurl.length-1))
+                {
+                    currindex=-1;
+                }
+                mainimage.attr('src',imgurl[currindex+1])
+            }
+            btnstart.click(function () {
+                intervalid=  setInterval(setimage,1000);
+                $(this).attr('disabled','disabled');
+                btnstop.removeAttr('disabled');
+            });
+            btnstop.click(function () {
+                clearInterval(intervalid);
+                $(this).attr('disabled','disabled');
+                btnstart.removeAttr('disabled');
+            }).attr('disabled','disabled');
+        });
+
+    </script>
+</head>
+<body>
+<input type="button" id="btnstar" value="startslideshow">
+<input type="button" id="btnsto" value="stopslideshow">
+<img  id="main" height="500" width="540" style="border: 3px solid grey" src="img/Hydrangeas.jpg"/>
+
+<br>
+<div id="divc">
+
+
+    <img src="img/Tulips.jpg" class="img"/>
+    <img src="img/Lighthouse.jpg" class="img"/>
+    <img src="img/Koala.jpg" class="img"/>
+    <img src="img/Hydrangeas.jpg"  class="img"/>
+    <img src="img/Jellyfish.jpg" class="img"/>
+
+
+</div>
+
+</body>
+</html>

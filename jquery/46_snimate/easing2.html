@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jquery.min.js"></script>
+    <script !src="">
+        $(document).ready(function () {
+            $("#imgT").click(function () {
+                $(this)
+                    .animate({'left':300},3000)
+                    .animate({'top':300},3000)
+                    .animate({'left':10},3000)
+                    .animate({'top':10},3000);
+            });
+
+        });
+        
+    </script>
+</head>
+<body>
+
+<img src="../45/img/Tulips.jpg" height="100" width="100" id="imgT" style="position: absolute"/>
+
+</body>
+</html>

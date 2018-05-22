@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+.img{
+    height: 100px;
+    width: 100px;
+    border: 3px solid grey;
+
+}
+
+    </style>
+    <script src="../../jquery.min.js"></script>
+
+    <script !src="">
+        $(document).ready(function () {
+            $("#divc").on({
+                mouseover:function () {
+
+                    $(this).css({
+                        'cursor':'pointer',
+                        'border-color':'red'
+                    });
+                },
+                mouseout:  function () {
+                    $(this).css({
+                        'cursor':'default',
+                        'border-color':'gray'
+                    });
+                },
+                click:function () {
+                    var imgurl=$(this).attr('src');
+                    var effect=$("#select").val();
+                    var dur=$("#duration").val()*1000;
+                    var main=$("#main");
+                    if (effect=='Fade') {
+                        main.fadeOut(dur,function () {
+                        $(this).attr('src',imgurl);
+                    }).fadeIn(dur);
+                    }
+                    else
+                    {
+                        main.slideUp(dur,function () {
+                            $(this).attr('src',imgurl);
+                        }).slideDown(dur);
+                    }
+
+                }
+            },"img");
+
+            var mainimg=$("#main")
+            var height1=mainimg.attr('height').val()*300;
+            console.log(height1);
+            var height=parseInt(mainimg.attr('height'));
+            var width=parseInt(mainimg.attr('width'));
+            $("#btnlar").click(function () {
+                height+=100;
+                width+=100;
+                mainimg.animate({
+                    'height':height,
+                    'width':width,
+                });
+
+            });
+            $("#btnsrink").click(function () {
+                height -= 100;
+                width -= 100;
+                mainimg.animate({
+                    'height': height,
+                    'width': width,
+                });
+            });
+        });
+
+    </script>
+</head>
+<body>
+Select effect:
+<select  id="select">
+    <option value="Fade">Fade</option>
+    <option value="Slide">Slide</option>
+
+</select>
+<select  id="duration">
+    <option value="0.5">0.5</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    </select>
+<input type="button" id="btnlar" value="enlarge">
+<input type="button" id="btnsrink" value="Srink">
+<br><br>
+
+<img  id="main" height="500" width="540" style="border: 3px solid grey" src="img/Hydrangeas.jpg"/>
+
+<br>
+<div id="divc">
+
+
+    <img src="img/Tulips.jpg" class="img"/>
+    <img src="img/Lighthouse.jpg" class="img"/>
+    <img src="img/Koala.jpg" class="img"/>
+    <img src="img/Hydrangeas.jpg"  class="img"/>
+    <img src="img/Jellyfish.jpg" class="img"/>
+
+
+</div>
+
+</body>
+</html>

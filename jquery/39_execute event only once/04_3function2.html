@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <!--ONE   Function-->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../jquery.min.js"></script>
+    <style>
+
+
+    </style>
+    <script !src="">
+        $(document).ready(function () {
+           $("input[type='button']").one({
+               mouseover: function () {
+                   $(this).css("background-color","yellow");
+               },
+               mouseout: function () {
+                   $(this).css("background-color","grey");
+               },
+               click :  function () {
+                   alert("buttonclicled");
+
+               }
+           });
+        });
+    </script>
+</head>
+<body>
+<input type="button"  value="click">
+<input type="button"  value="click">
+<input type="button"  value="click">
+</body>
+</html>

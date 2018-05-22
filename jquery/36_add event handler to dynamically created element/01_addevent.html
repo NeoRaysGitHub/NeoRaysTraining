@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>event</title>
+    <script src="../../jquery.min.js"></script>
+    <script !src="">
+        $(document).ready(function () {
+            $("#btn").on("click",function () {
+                var newlist='<li>new list</li>';
+                $('ul').append(newlist)
+            });
+        });
+
+    </script>
+</head>
+<body>
+<input type="button" id="btn" value="add me">
+
+<ul>
+    <l1>List item</l1>
+    <l1>ListItem</l1>
+</ul>
+</body>
+</html>

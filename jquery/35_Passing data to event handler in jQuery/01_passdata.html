@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+    <script src="../../jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+                $('#btnClickMe').on('click', {
+            firstName: 'John',
+            lastName: 'Doe'
+            }, sayHello);
+
+            $('#btnClickMe').on('click', {
+            firstName: 'Mary'
+            }, sayHello);
+
+            $('#btnClickMe').on('click', sayHello);
+
+            function sayHello(event) {
+            if (event.data == null) {
+             alert('No name provided');
+            }
+            else {
+            alert('Hello ' + event.data.firstName +
+            (event.data.lastName != null ? ' ' + event.data.lastName : ''));
+            }
+            }
+            });
+</script>
+
+</head>
+<body style="font-family:Arial">
+<input id="btnClickMe" type="button" value="Click Me" />
+</body>
+</html>

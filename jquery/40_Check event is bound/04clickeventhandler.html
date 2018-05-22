@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jquery.min.js"></script>
+    <script !src="">
+        function clickhandler() {
+            alert("clicked")
+        }
+        $(document).ready(function () {
+           $("#btn").on("click",function () {alert("button clicked1");})
+           $("#btn").on("click",function () {alert("button clicked2");})
+           $("#btn").on("click",function () {alert("button clicked3");})
+           $("#btn").off("click").on("click",function () {alert("button clicked4");})
+
+
+
+        });
+
+
+
+    </script>
+</head>
+<body>
+<input type="button"id="btn" value="click"><!--onclick="clickhandler()">-->
+</body>
+</html>

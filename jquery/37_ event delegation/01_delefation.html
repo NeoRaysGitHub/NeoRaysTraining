@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <!--USing ON OFF function-->
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title><!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <title>event</title>
+                    <script src="../../jquery.min.js"></script>
+                    <!--<script-->
+                            <!--src="https://code.jquery.com/jquery-1.11.2.min.js"-->
+                            <!--integrity="sha256-Ls0pXSlb7AYs7evhd+VLnWsZ/AqEHcXBeMZUycz/CcA="-->
+                            <!--crossorigin="anonymous"></script>-->
+                    <script !src="">
+                        $(document).ready(function () {
+
+                            $('ul').on('click','li',function () {
+                                $(this).fadeOut(500);
+                            });
+
+                            $("#btn").on("click",function () {
+
+                                $('ul').append("<li>new list</li>");
+                            });
+                            $('#btnun').click(function () {
+                                $('ul').off('click','li');
+                            });
+
+                        });
+
+
+                    </script>
+                </head>
+<body>
+<input type="button" id="btn" value="add me">
+<input type="button" id="btnun" value="undelegate">
+
+
+<ul>
+    <li>List item</li>
+    <li>ListItem</li>
+</ul>
+</body>
+</html>
+
+
+
+
+
+

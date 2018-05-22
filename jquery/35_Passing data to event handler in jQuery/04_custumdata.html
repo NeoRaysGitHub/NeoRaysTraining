@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jquery.min.js"></script>
+    <script !src="">
+        $(document).ready(function () {
+                $("#btn").on("click",{
+                    firstname:"pradeep",
+                    lastname:"kumar"
+                },say);
+            $("#btn").on("click",{
+                firstname:"pradeep",
+            },say);
+
+            function say(event) {
+                alert("hello"+ event.data.firstname+" "+(event.data.lastname!=null?" "+event.data.lastname:""));
+            }
+
+
+        });
+
+
+    </script>
+</head>
+<body>
+
+<input id="btn" type="button" value="Click Me" />
+
+</body>
+</html>

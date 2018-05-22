@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jquery.min.js"></script>
+    <script !src="">
+        function clickhandler() {
+            alert("clicked")
+        }
+        $(document).ready(function () {
+            var button=document.getElementById("btn");
+            button.addEventListener("click",clickhandler);
+            var jqobj=$("#btn");
+         var rawdom= jqobj.get(0);
+         var ev=$._data(rawdom,"events");
+         if (ev!=undefined && ev.click != undefined)
+         {
+             alert("click exist")
+         }
+         else
+         {
+
+             alert("clicked doesnot exist")
+
+         }
+        });
+
+
+
+    </script>
+</head>
+<body>
+<input type="button"id="btn" value="click"><!--onclick="clickhandler()">-->
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jquery.min.js"></script>
+    <script !src="">
+    $(document).ready(function () {
+        $("#hyp").on("click",function (e) {
+                e.preventDefault();
+            $("#divresult").append("hyperlink is prevented<br/>")
+        });
+    });
+
+    </script>
+</head>
+<body>
+<h3>
+    link prventd to redirected
+
+</h3>
+
+<a href="https://learn.jquery.com" id="hyp">learnjquery</a>
+<div id="divresult"></div>
+
+</body>
+</html>
