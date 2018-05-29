@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Registration</title>
+</head>
+<body bgcolor="cyan">
+<center>
+<h1>EMPLOYEE REGISTRATION FORM</h1>
+	<form th:attr="action=@{result}" th:object="${employeeModel}">
+		<table>
+			<tr>
+				<td><label th:text="#{label.id}">Enter the employee_id</label></td>
+				<td><input type="text" th:field="*{id}" required="required"/></td>
+			</tr>
+			<tr>
+				<td><label th:text="#{label.firstname}">Enter the
+						firstname</label></td>
+				<td><input type="text" th:field="*{firstname}" /></td>
+			</tr>
+			<tr>
+				<td><label th:text="#{label.lastname}">Enter the
+						lastname</label></td>
+				<td><input type="text" th:field="*{lastname}" /></td>
+			</tr>
+			<tr>
+				<td><label th:text="#{label.password}">Enter your
+						password</label></td>
+				<td><input type="text" th:field="*{password}" /></td>
+			</tr>
+			<tr>
+				<td><label th:text="#{label.confirm_password}">Confirm
+						your password</label></td>
+				<td><input type="text" th:field="*{confirm_password}" /></td>
+			</tr>
+			<tr>
+				<td><label th:text="#{label.mail_id}">Enter your
+						mail_id</label></td>
+				<td><input type="text" th:field="*{mail_id}" /></td>
+			</tr>
+			<tr>
+				<td><label th:text="#{label.dob}">Enter your Date of
+						birth</label></td>
+				<td><input type="text" th:field="*{dob}" /></td>
+			</tr>
+			<tr>
+				<td><label th:text="#{label.salary}">Enter your salary</label></td>
+				<td><input type="text" th:field="*{salary}" /></td>
+			</tr>
+			<tr>
+				<td><label th:text="#{label.gender}">Please select your
+						gender</label></td>
+				<td><input type="radio" th:field="*{gender}" value="M" />Male <input
+					type="radio" th:field="*{gender}" value="F" />Female</td>
+			</tr>
+			<tr>
+				<td><label th:text="#{label.department}">Enter the
+						Department</label></td>
+				<td><input type="text" th:field="*{department}" /></td>
+			</tr>
+			<!-- <tr>
+<td><label th:text="#{label.pic}">Upload your photo</label></td>
+<td><input type="file" th:field="*{}"/></td>
+</tr> -->
+			<tr>
+				<td><input type="submit" th:attr="value=#{subcribe.submit}" /></td>
+			</tr>
+		</table>
+	</form>
+	<a href="?lang=te" style="text-decoration: none;">TELGU</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="?lang=en" style="text-decoration: none;">ENGLISH</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="?lang=es" style="text-decoration: none;">SPANISH</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="?lang=fr" style="text-decoration: none;">FRENCH</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="?lang=kn" style="text-decoration: none;">KANADA</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="?lang=hi" style="text-decoration: none;">HINDI</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</body>
+</center>
+</html>
