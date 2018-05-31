@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>User Register Form</title>
+
+<!-- <link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+ -->
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--  Validations  -->
+<!-- <script>
+		$(document).ready(function(){
+		    $("#submit").click(function(){
+		    	var username = $('#username').val();
+		    	var email = $('#email').val();
+		    	var password = $('#password').val();
+		    	var conformpassword = $('#conformpassword').val();
+		    	var phone = $('#phone').val();
+		    	if(username.length == 0){
+					$("#username_error").text("UserName Should not be  Empty");
+					$("#username").focus();
+					return false;
+			    	}
+		    	else if(email.length == 0){
+		    		$("#username_error").text("");
+		    		$('#email_error').text("Email Should not be  Empty")
+					$("#email").focus();
+					return false;
+			    	}	
+		    	else if(password.length == 0){
+		    		$('#email_error').text("")
+		    		$('#password_error').text("Password Should not be  Empty")
+					$("#password").focus();
+					return false;
+			    	}	
+		    	else if(conformpassword.length == 0){
+		    		$('#password_error').text("")
+		    		$('#conformpassword_error').text("Conform Password Should not be  Empty")
+					$("#conformpassword").focus();
+					return false;
+			    	}	
+		    	else if(phone.length == 0){
+		    		$('#conformpassword_error').text("")
+		    		$('#phone_error').text("Phone Should not be  Empty")
+					$("#phone").focus();
+					return false;
+			    	}	       	
+		    });
+		});
+	</script>
+
+ -->
+<style>
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-column-gap: .5em;
+	grid-gap: .5em;
+}
+
+.wrapper>div {
+	background: #cce6ff;
+	padding: 1em;
+}
+
+.wrapper>div:nth-child(odd) {
+	background: #80c1ff;
+}
+
+.header {
+	grid-column: 1/4;
+}
+
+.main {
+	grid-column: 2/3;
+}
+
+.footer {
+	grid-column: 1/4;
+}
+</style>
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="header" align="center">
+		<p> Header </p>
+		</div>
+		<div class="left-pannel">
+			<h1>Quick Access</h1>
+		</div>
+
+		<div class="main" align="center">
+			<form action="userPersonalForm" th:attr="action=@{userPersonalForm}"
+				th:object="${user}" method="post">
+				<table>
+					<tr>
+						<td th:text="#{user.label.name}">User Name:</td>
+						<td><input id="username" type="text" name="username"
+							th:field="*{user_name}" /></td>
+						<td><span id="username_error"></span></td>
+					</tr>
+					<tr>
+						<td th:text="#{user.label.email}">Email :</td>
+						<td><input id="email" type="text" name="email"
+							th:field="*{email}" /></td>
+						<td><span id="email_error"></span></td>
+					</tr>
+					<tr>
+						<td th:text="#{user.label.password}">Password :</td>
+						<td><input id="password" type="text" name="password"
+							th:field="*{password}" /></td>
+						<td><span id="password_error"></span></td>
+					</tr>
+					<tr>
+						<td th:text="#{user.label.conformpassword}">Conform Password
+							:</td>
+						<td><input id="conformpassword" type="text"
+							name="conformpassword" th:field="*{conform_password}" /></td>
+						<td><span id="conformpassword_error"></span></td>
+					</tr>
+					<tr>
+						<td th:text="#{user.label.phone}">Phone :</td>
+						<td><input id="phone" type="text" name="phone"
+							th:field="*{phone}" /></td>
+						<td><span id="phone_error"></span></td>
+					</tr>
+					<tr>
+						<td align="center"><input id="submit" type="submit"
+							value="Next" th:value="#{user.label.submit}" /></td>
+						<td align="center"><input id="reset" type="reset"
+							value="Reset" th:value="#{user.label.reset}" /></td>
+					</tr>
+				</table>
+			</form>
+		</div>		
+		
+		<div class="right-pannel">
+			<h1>Adds Con........</h1>
+		</div>
+		
+		<div class="footer">
+		<p> Footer Page.</p>		
+		</div>
+	</div>
+</body>
+<!-- <script type="text/javascript" src="D:\cluster\SpringBoot\ThyemeleafForms\src\main\webapp\WEB-INF\jQuery\userRegFrom.js"></script> -->
+</html>

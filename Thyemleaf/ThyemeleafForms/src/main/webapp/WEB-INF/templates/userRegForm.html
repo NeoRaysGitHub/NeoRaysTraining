@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>User Register Form</title>
+
+<!-- <link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+ -->
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- 
+	<script>
+		$(document).ready(function(){
+		    $("#submit").click(function(){
+		    	var username = $('#username').val();
+		    	var email = $('#email').val();
+		    	var password = $('#password').val();
+		    	var conformpassword = $('#conformpassword').val();
+		    	var phone = $('#phone').val();
+		    	if(username.length == 0){
+					$("#username_error").text("UserName Should not be  Empty");
+					$("#username").focus();
+					return false;
+			    	}
+		    	else if(email.length == 0){
+		    		$("#username_error").text("");
+		    		$('#email_error').text("Email Should not be  Empty")
+					$("#email").focus();
+					return false;
+			    	}	
+		    	else if(password.length == 0){
+		    		$('#email_error').text("")
+		    		$('#password_error').text("Password Should not be  Empty")
+					$("#password").focus();
+					return false;
+			    	}	
+		    	else if(conformpassword.length == 0){
+		    		$('#password_error').text("")
+		    		$('#conformpassword_error').text("Conform Password Should not be  Empty")
+					$("#conformpassword").focus();
+					return false;
+			    	}	
+		    	else if(phone.length == 0){
+		    		$('#conformpassword_error').text("")
+		    		$('#phone_error').text("Phone Should not be  Empty")
+					$("#phone").focus();
+					return false;
+			    	}	       	
+		    });
+		});
+		
+		// <td th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Name Error</td>
+	</script> -->
+
+</head>
+
+<body>
+	<form action="success" th:attr="action=@{success}" th:object="${user}" method="post" >
+		<table border="1" align="center">
+			<tr>
+				<td th:text="#{user.label.name}">User Name:</td>
+				<td><input id="username" type="text" name="username" th:field="*{user_name}" />
+				<label th:if="${#fields.hasErrors('user_name')}"  th:errors="*{user_name}">Name Error</label>
+				</td>
+			</tr>
+			<tr>
+				<td th:text="#{user.label.email}">Email :</td>
+				<td>
+				<input id="email" type="text" name="email" th:field="*{email}"/>
+				<label th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></label>
+				</td>
+				
+			</tr>
+			<tr>
+				<td th:text="#{user.label.password}">Password :</td>
+				<td><input id="password" type="text" name="password" th:field="*{password}"/>
+				<label th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></label>
+				</td>
+				
+			</tr>
+			<tr>
+				<td th:text="#{user.label.conformpassword}">Conform Password :</td>
+				<td><input id="conformpassword" type="text" name="conformpassword" th:field="*{conform_password}"/>
+				<label th:if="${#fields.hasErrors('conform_password')}" th:errors="*{conform_password}"></label>
+				</td>
+				
+			</tr> 
+			<tr>
+				<td th:text="#{user.label.phone}">Phone :</td>
+				<td><input id="phone" type="text" name="phone" th:field="*{phone}"/>
+				<label th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></label>
+				</td>
+				
+			</tr>
+			<tr>
+			<td align="center"> <input id="submit" type="submit" value="Next" th:value="#{user.label.submit}" /></td>
+			<td align="center"> <input id="reset" type="reset" value="Reset" th:value="#{user.label.reset}" /> </td>
+			</tr>
+		</table>		
+	</form>
+</body>
+<!-- <script type="text/javascript" src="D:\cluster\SpringBoot\ThyemeleafForms\src\main\webapp\WEB-INF\jQuery\userRegFrom.js"></script> -->
+</html>

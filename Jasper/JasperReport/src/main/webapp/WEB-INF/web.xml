@@ -1,0 +1,27 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  
+  <servlet>
+  <servlet-name>jasper</servlet-name>
+  <servlet-class>com.neorays.jasper.EmployeeJasper1</servlet-class>
+ 	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+  	<servlet-name>EmployeeJasperHtml</servlet-name>
+  	<display-name>EmployeeJasperHtml</display-name>
+  	<description></description>
+  	<servlet-class>com.neorays.jasper.EmployeeJasperHtml</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>jasper</servlet-name>
+  	<url-pattern>/jasper</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EmployeeJasperHtml</servlet-name>
+  	<url-pattern>/jasperHtml</url-pattern>
+  </servlet-mapping>
+</web-app>

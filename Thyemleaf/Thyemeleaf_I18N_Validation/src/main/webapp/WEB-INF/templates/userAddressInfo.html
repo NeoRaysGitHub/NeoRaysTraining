@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<style>
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-column-gap: .5em;
+	grid-gap :.5em;
+}
+
+.wrapper>div {
+	background: #cce6ff;
+	padding: 1em;
+}
+
+.wrapper>div:nth-child(odd) {
+	background: #80c1ff;
+}
+.header {
+	grid-column: 1/4;
+}
+
+.main {
+	grid-column: 2/3;
+}
+
+.footer {
+	grid-column: 1/4;
+}
+</style>
+</head>
+<body>
+
+	<div class="wrapper">
+	<div class="header" align="center">
+	<p> Header Page</p>
+	</div>
+
+		<div class="left-pannel">
+			<h1>Quick Access</h1>
+		</div>
+
+		<div class="main" align="center">
+			<form action="success" th:action="@{success}" th:object="${address}"
+				method="post">
+				<table>
+
+					<tr>
+						<td>ADDRESS</td>
+						<td><input type="text" name="Address" th:field="*{address}" />
+						</td>
+					</tr>
+
+					<tr>
+						<td>CITY</td>
+						<td><input type="text" th:field="*{city}" /></td>
+					</tr>
+
+					<tr>
+						<td>PIN CODE</td>
+						<td><input type="text" th:field="*{pin_code}" /></td>
+					</tr>
+					<tr>
+						<td>STATE</td>
+						<td><input type="text" th:field="*{state}" /></td>
+					</tr>
+					<tr>
+						<td>COUNTRY</td>
+						<td><input type="text" name="Country" th:field="*{country}" /></td>
+					</tr>
+
+					<tr>
+						<td colspan="" align="center"><input type="submit"
+							value="Submit" th:value="#{user.label.submit}" /></td>
+						<td colspan="" align="center"><input type="reset"
+							value="Reset" th:value="#{user.label.reset}" /></td>
+					</tr>
+
+				</table>
+
+			</form>
+		</div>
+
+		<div class="right-pannel">
+			<h1>Adds Con........</h1>
+		</div>
+		
+		<div class="footer">
+		<p> Footer Page .. </p>
+		</div>
+	</div>
+</body>
+
+</html>

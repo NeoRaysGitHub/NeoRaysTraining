@@ -1,0 +1,13 @@
+<books xmlns="http://booksinfo.com"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://booksinfo.com D://XML/books.xsd">
+	<book isbn="Neorays" title="XML" price="100">
+		<author>Suresh</author>
+		<publication>Neorays</publication>
+	</book>
+	<book isbn="Neorays">
+	  <author>Hari</author>
+	  <author>Mittu</author>
+	  <publication>Neo</publication>
+	</book>
+</books>

@@ -1,0 +1,11 @@
+<students xmlns="http://www.studentinfo.com"
+		  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	      xsi:schemaLocation="http://www.studentinfo.com D://XML/student.xsd"
+	      >
+	<student>
+		<stdName>Suresh</stdName>
+		<stdAge>24</stdAge>
+		<stdPhone>7234783432</stdPhone>
+	</student>
+	
+</students>

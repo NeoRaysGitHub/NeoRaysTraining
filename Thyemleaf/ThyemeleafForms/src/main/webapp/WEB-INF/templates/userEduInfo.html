@@ -1,0 +1,54 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<form action="userAddressForm" th:attr="action=@{userAddressForm}"  th:object="${education}" method="post">
+<table border="1" align="center">
+
+<tr>
+<td align="center"><b th:text="#{label.edu.slno}">Sl.No.</b></td>
+<td align="center"><b th:text="#{label.edu.examination}">Examination</b></td>
+<td align="center"><b th:text="#{label.edu.board}">Board</b></td>
+<td align="center"><b th:text="#{label.edu.percenatge}">Percentage</b></td>
+<td align="center"><b th:text="#{label.edu.yop}">Year of Passing</b></td>
+</tr>
+ 
+<tr>
+<td>1</td>
+<td th:text="#{label.edu.classX}">Class X</td>
+<td><input type="text" name="ClassX_Board" th:field="*{classX}"/></td>
+<td><input type="text" name="ClassX_Percentage" th:field="*{classX}" /></td>
+<td><input type="text" name="ClassX_YrOfPassing" th:field="*{classX}" /></td>
+</tr>
+ 
+<tr>
+<td>2</td>
+<td th:text="#{label.edu.classXII}">Class XII</td>
+<td><input type="text" name="ClassXII_Board" th:field="*{classX1}" /></td>
+<td><input type="text" name="ClassXII_Percentage" th:field="*{classX1}" /></td>
+<td><input type="text" name="ClassXII_YrOfPassing" th:field="*{classX1}" /></td>
+</tr>
+ 
+<tr>
+<td>3</td>
+<td th:text="#{label.edu.graduation}">Graduation</td>
+<td><input type="text" name="Graduation_Board" th:field="*{graduation}"/></td>
+<td><input type="text" name="Graduation_Percentage" th:field="*{graduation}" /></td>
+<td><input type="text" name="Graduation_YrOfPassing" th:field="*{graduation}" /></td>
+</tr>
+ 
+<tr>
+<td>4</td>
+<td th:text="#{label.edu.masters}">Masters</td>
+<td><input type="text" name="Masters_Board"  th:filed="*{masters}"/></td>
+<td><input type="text" name="Masters_Percentage" th:filed="*{masters}" /></td>
+<td><input type="text" name="Masters_YrOfPassing" th:filed="*{masters}" /></td>
+</tr> 
+
+<tr>
+<td colspan="3" align="center"><input type="submit"  value="Submit" th:value="#{user.label.submit}"/> </td>
+<td colspan="2"  align="center"><input type="reset" value="Reset" th:value="#{user.label.reset}"/> </td>
+</tr>
+</table>
+
+</form>
+</html>
+

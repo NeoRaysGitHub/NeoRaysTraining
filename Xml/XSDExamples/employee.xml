@@ -1,0 +1,7 @@
+<employee xmlns="http://employeeinfo.com"  
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://employeeinfo.com D://XML/employee.xsd">
+	<empno>101</empno>
+	<name>Suresh</name>
+	<salary>1000</salary>
+</employee>

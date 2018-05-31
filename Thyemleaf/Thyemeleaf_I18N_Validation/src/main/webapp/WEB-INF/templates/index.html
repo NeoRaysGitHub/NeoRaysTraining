@@ -1,0 +1,120 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#btn-fr").click(function(){
+			$.ajax({
+				url : 'http://localhost:3030/ThyemeleafForms/?language=fr',
+				success: function(){
+					location.reload(); 
+					}		
+				});
+			});
+		$("#btn-en").click(function(){
+			$.ajax({
+				url : 'http://localhost:3030/ThyemeleafForms/?language=en',
+				success: function(){
+					location.reload(); 
+					}		
+				});
+			});
+		});
+
+</script>
+
+<style>
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-column-gap: .5em;
+	grid-gap: .5em;
+}
+
+.wrapper>div {
+	background: #cce6ff;
+	padding: 1em;
+}
+
+.wrapper>div:nth-child(odd) {
+	background: #80c1ff;
+
+}
+
+.header {
+	grid-column: 1/4;
+}
+
+.main {
+	grid-column: 2/3;
+}
+
+.footer {
+	grid-column: 1/4;
+}
+
+.btn {
+	color: black;
+	text-decoration: none;
+	padding: .2em .5em;	
+	border: 1px solid;
+}
+
+.btn:HOVER {
+	background-color: #1aff1a;
+}
+
+body {
+
+}
+</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header" align="right">
+			<header>
+
+				Language :&nbsp;&nbsp;&nbsp; <a href="" class="btn" id="btn-en"> English </a> &nbsp;&nbsp;
+				<a href="" class="btn" id="btn-fr">French</a>
+				<!-- 
+				<p id="id_lang_en">English</p>
+				<p id="id_lang_fr">French</p>
+				<button id="id_lang_en">English</button>
+				<button id="id_lang_fr">French</button>
+				 -->
+
+				<h1 align="center" th:text="#{welcome.header}">Thyemleaf Form
+					Examples</h1>
+
+			</header>
+		</div>
+
+		<!-- Main From -->
+
+		<div class="left-pannel">
+			<h1>Quick Access</h1>
+		</div>
+
+		<div align="center" class="main">
+			<a href="userRegisterForm" th:href="@{userRegisterForm}"
+				th:text="#{link.userRegister}"> Register </a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="userLogin"
+				th:href="@{userLogin}" th:text="#{link.userLogin}"> Login </a>
+		</div>
+
+		<div class="right-pannel">
+			<h1>Adds Con........</h1>
+		</div>
+
+
+		<div class="footer">
+			<p>Footer Page...</p>
+		</div>
+
+
+	</div>
+
+</body>
+</html>

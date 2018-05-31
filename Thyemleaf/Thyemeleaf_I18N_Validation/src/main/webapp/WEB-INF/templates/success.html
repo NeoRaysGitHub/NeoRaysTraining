@@ -1,0 +1,90 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<style type="text/css">
+.wrapper {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-column-gap: 1em;
+}
+
+.wrapper>div {
+	background: #eee;
+	padding: 1em;
+}
+
+.wrapper>div:nth-child(odd) {
+	background: #ddd;
+}
+</style>
+
+</head>
+<h1 align="center">Thyemleaf</h1>
+<hr />
+<br />
+<body>
+
+	<h1>Success</h1>
+	<hr />
+	<br />
+	<p th:text="${session.user}"></p>
+	<p th:text="${session.address}"></p>
+	<p th:text="'Personal : '+${session.personal}"></p>
+	<p th:text="'Education : '+${session.education}"></p>
+	<hr />
+
+
+	<div class="wrapper">
+		<div>
+			<table>
+				<tr>
+					<th>User Name</th>
+					<th>User Email</th>
+					<th>User Phone</th>
+
+				</tr>
+				<tr th:each="user :${session.user}">
+					<td th:text="${user.user_name}"></td>
+					<td th:text="${user.email}"></td>
+					<td th:text="${user.phone}"></td>
+				</tr>
+			</table>
+		</div>
+
+		<div>
+			<table>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Date Of Birth</th>
+					<th>Gender</th>
+
+				</tr>
+				<tr th:each="personal :${session.personal}">
+					<td th:text="${personal.first_name}"></td>
+					<td th:text="${personal.last_name}"></td>
+					<td th:text="${personal.dob}"></td>
+					<td th:text="${personal.gender}"></td>
+				</tr>
+			</table>
+		</div>
+
+		<!-- <div>
+			<table>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Date Of Birth</th>
+					<th>Gender</th>
+
+				</tr>
+				<tr th:each="education :${session.education}">
+					<td th:text="${education.first_name}"></td>
+					<td th:text="${education.last_name}"></td>
+					<td th:text="${education.dob}"></td>
+					<td th:text="${education.gender}"></td>
+				</tr>
+			</table>
+		</div> -->
+	</div>
+</body>
+</html>

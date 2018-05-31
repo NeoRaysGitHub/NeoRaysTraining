@@ -1,0 +1,7 @@
+<!DOCTYPE employee SYSTEM "C:\Users\Neorays\Desktop\Xml\employee.dtd">
+
+<employee>
+<empno></empno>
+<name></name>
+<salary></salary>
+</employee>

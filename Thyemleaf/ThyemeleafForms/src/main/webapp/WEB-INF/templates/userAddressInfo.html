@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<form action="success" th:action="@{success}">
+		<table border="1" align="center">
+
+			<tr>
+				<td>ADDRESS <br />
+				<br />
+				<br /></td>
+				<td><textarea name="Address" rows="4" cols="30"></textarea></td>
+			</tr>
+
+			<tr>
+				<td>CITY</td>
+				<td><input type="text" name="City" maxlength="30" /> </td>
+			</tr>
+
+			<tr>
+				<td>PIN CODE</td>
+				<td><input type="text" name="Pin_Code" maxlength="6" /> </td>
+			</tr>
+			<tr>
+				<td>STATE</td>
+				<td><input type="text" name="State" maxlength="30" /></td>
+			</tr>
+			<tr>
+				<td>COUNTRY</td>
+				<td><input type="text" name="Country" value="India"
+					readonly="readonly" /></td>
+			</tr>
+
+		</table>
+
+	</form>
+
+</body>
+
+</html>

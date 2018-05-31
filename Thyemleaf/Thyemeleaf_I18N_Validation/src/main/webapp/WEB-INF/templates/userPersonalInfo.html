@@ -1,0 +1,101 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<style>
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-column-gap: .5em;
+	grid-gap :.5em;
+}
+
+.wrapper>div {
+	background: #cce6ff;
+	padding: 1em;
+}
+
+.wrapper>div:nth-child(odd) {
+	background: #80c1ff;
+}
+.header {
+	grid-column: 1/4;
+}
+
+.main {
+	grid-column: 2/3;
+}
+
+.footer {
+	grid-column: 1/4;
+}
+</style>
+
+</head>
+<body>
+	<div class="wrapper">
+	<div class="header" align="center">
+	<p> Header </p>
+	</div>
+
+		<div class="left-pannel">
+			<h1>Quick Access</h1>
+		</div>
+
+		<div class="main" align="center">
+			<form action="userEduForm" th:action="@{userEduForm}"
+				th:object="${personal}" method="post">
+				<table>
+					<tr>
+						<td th:text="#{user.label.firstname}">FIRST NAME</td>
+						<td><input type="text" name="first_name"
+							th:field="*{first_name}" /> <span
+							th:if="${#fields.hasErrors('first_name')}"
+							th:text="#{label.first_name.error}"></span></td>
+					</tr>
+					<tr>
+						<td th:text="#{user.label.lastname}">LAST NAME</td>
+						<td><input type="text" name="last_name"
+							th:field="*{last_name}" /></td>
+					</tr>
+					<tr>
+						<td th:text="#{user.label.dob}">DATE OF BIRTH</td>
+						<td><input type="text" name="date" th:field="*{dob}" /></td>
+					</tr>
+					<tr>
+						<td th:text="#{user.label.gender}">GENDER</td>
+						<td><input type="radio" name="gender" value="Male"
+							th:field="*{gender}" checked="checked" />Male <input
+							type="radio" name="gender" value="Female" th:field="*{gender}" />
+							Female</td>
+					</tr>
+					<!-- <tr>
+				<td>HOBBIES <br /> <br /> <br /></td>
+				<td>Drawing 
+				<input type="checkbox" name="Hobby_Drawing"	value="Drawing" /> 
+					Singing <input type="checkbox" name="Hobby_Singing" value="Singing" th:field="*{gender}"/>
+					Dancing <input type="checkbox" name="Hobby_Dancing" value="Dancing" />
+					Sketching <input type="checkbox" name="Hobby_Cooking" value="Cooking" /> <br />
+					Others <input type="checkbox" name="Hobby_Other" value="Other" />
+					<input type="text" name="Other_Hobby" maxlength="30" />
+				</td>
+			</tr>-->
+					<tr>
+						<td align="center"><input type="submit" value="Next"
+							th:value="#{user.label.submit}" /></td>
+						<td align="center"><input type="reset" value="Reset"
+							th:value="#{user.label.reset}" /></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+
+		<div class="right-pannel">
+			<h1>Adds Con........</h1>
+		</div>
+		<div class="footer">
+		<p> Footer Page .. </p>
+		
+		</div>
+	</div>
+</body>
+</html>

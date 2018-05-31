@@ -1,0 +1,24 @@
+<!--  schema  is given by the W3C , so to use that we need to import that by 'xmlns' -->
+<schema targetNamespace="http://www.studentinfo.com"
+	    xmlns="http://www.w3.org/2001/XMLSchema"
+	    elementFormDefault="qualified">
+	<!-- Define root element  -->
+	<element name="students">
+		<!-- students is root , it can have child elements and attributes too. -->
+		<!-- complexType is used when an element having text data,child elemnts and attributes. -->
+		<complexType>
+			<sequence>
+				<element name = "student" minOccurs="0" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="stdName" type="string" />
+							<element name="stdAge" type="int" />
+							<element name="stdPhone" type="long" />
+						</sequence>
+						<attribute name="stdNo" type="int" />
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

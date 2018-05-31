@@ -1,0 +1,10 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<h1 align="center">Thyemleaf Java Annotation Config..</h1>
+	
+	<select >
+	
+		<option th:each="user:${allUsers}" th:value="${user}"
+			th:text="${user}">User</option>
+	</select>
+	
+</html>

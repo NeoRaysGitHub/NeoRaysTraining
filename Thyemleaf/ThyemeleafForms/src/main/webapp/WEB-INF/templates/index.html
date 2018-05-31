@@ -1,0 +1,51 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#id_lang_fr").click(function(){
+			$.ajax({
+				url : 'http://localhost:3030/ThyemeleafForms/?language=fr',
+				success: function(){
+					location.reload(); 
+					}		
+				});
+			});
+		$("#id_lang_en").click(function(){
+			$.ajax({
+				url : 'http://localhost:3030/ThyemeleafForms/?language=en',
+				success: function(){
+					location.reload(); 
+					}		
+				});
+			});
+		});
+
+</script>
+</head>
+<h1 align="center" th:text="#{welcome.header}">Thyemleaf Form
+	Examples</h1>
+<hr />
+<br />
+<div align="center">
+	<a href="userRegisterForm" th:href="@{userRegisterForm}"
+		th:text="#{link.userRegister}"> Register </a>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="userLogin"
+		th:href="@{userLogin}" th:text="#{link.userLogin}"> Login </a>
+</div>
+<hr />
+<br />
+<div align="left">
+	Language :&nbsp;&nbsp;&nbsp;
+	<p id="id_lang_en" style="text-decoration: underline;">English</p>
+	<p id="id_lang_fr">French</p>
+
+
+	<a id="id_lang_en" href="?language=en" th:href="@{?language=en}"
+		th:text="#{locale.lang.english}">English</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+		id="id_lang_fr" href="?language=fr" th:href="@{?language=fr}"
+		th:text="#{locale.lang.french}">French</a>
+</div>
+</html>

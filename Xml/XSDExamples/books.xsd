@@ -1,0 +1,21 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://booksinfo.com"
+	elementFormDefault="qualified">
+	<element name="books">
+		<complexType>
+			<sequence>
+				<element name="book" minOccurs="0" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="author" type="string" minOccurs="1" maxOccurs="unbounded" />
+							<element name="publication" type="string" />
+						</sequence>
+						<attribute name="isbn" type="string"  />
+						<attribute name="title" type="string" />
+						<attribute name="price" type="double" />
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>
