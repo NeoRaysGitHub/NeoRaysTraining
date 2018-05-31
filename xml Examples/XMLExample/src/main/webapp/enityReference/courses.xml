@@ -1,0 +1,10 @@
+<!DOCTYPE courses [
+<!ENTITY cbk "chennurubharathkumarreddy">
+<!ELEMENT courses (course,inst)*>
+<!ELEMENT course (#PCDATA)>
+<!ELEMENT inst (#PCDATA)>
+]>
+<courses>
+<course>java</course>
+<inst>$cbk;</inst>
+</courses>
