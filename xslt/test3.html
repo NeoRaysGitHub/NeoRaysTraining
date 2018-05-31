@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Spring with Thymeleaf</title>
+</head>
+<body>
+   <h1>Spring MVC + Thymeleaf  </h1>
+   <h3>Sum of two numbers</h3>
+   
+   <p th:text="${res}">welcome to thymeleaf</p>
+   <a th:href="@{/index.jsp}">ClickMe</a>
+   <p>In two years, it will be <span th:text="2013 + 2">1494</span>.</p>
+</body>
+</html>

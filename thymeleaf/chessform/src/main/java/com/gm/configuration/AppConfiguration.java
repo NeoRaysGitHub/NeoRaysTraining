@@ -1,0 +1,103 @@
+package com.gm.configuration;
+
+import java.util.Locale;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.MessageSource;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.validation.Validator;
+import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
+import org.springframework.web.servlet.LocaleResolver;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.i18n.CookieLocaleResolver;
+import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
+import org.thymeleaf.spring4.SpringTemplateEngine;
+import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
+import org.thymeleaf.spring4.view.ThymeleafViewResolver;
+@Configuration
+@ComponentScan(basePackages ={"com.gm.controller"})
+@EnableWebMvc
+public class AppConfiguration extends WebMvcConfigurerAdapter {
+	@Autowired
+	   private ApplicationContext applicationContext;
+
+	@Bean
+	public SpringResourceTemplateResolver templateResolver() {
+		 System.out.println("SpringResourceTemplateResolver");
+	      SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
+	      templateResolver.setApplicationContext(applicationContext);
+	      templateResolver.setPrefix("/WEB-INF/views/");
+	      templateResolver.setSuffix(".html");
+	      return templateResolver;
+	   }
+	
+	@Bean(name = "templateEngine")
+	public SpringTemplateEngine getTemplateEngine() {
+		SpringTemplateEngine templateEngine = new SpringTemplateEngine();
+		templateEngine.setTemplateResolver(templateResolver());
+		return templateEngine;
+	}
+	
+	@Bean(name = "viewResolver")
+	public ThymeleafViewResolver getViewResolver() {
+		ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
+		viewResolver.setTemplateEngine(getTemplateEngine());
+		viewResolver.setCharacterEncoding("UTF-8");
+		return viewResolver;
+	}
+	
+	
+	
+	@Bean(name = "messageSource")
+	public MessageSource getMessageSource() {
+	ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
+	//	messageSource.setBasename("file:D:/External/Properties/msg");
+		messageSource.setBasename("/com/gm/msgs/msg");
+		messageSource.setDefaultEncoding("UTF-8");
+		return messageSource;
+	}
+		
+	@Bean
+	public LocaleResolver localeResolver() {
+		CookieLocaleResolver resolver = new CookieLocaleResolver();
+		resolver.setDefaultLocale(new Locale("en"));
+		resolver.setCookieName("lang");
+		resolver.setCookieMaxAge(4800);
+		return resolver;
+	}
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor();
+		interceptor.setParamName("lang");
+		registry.addInterceptor(interceptor);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	@Override
+	public Validator getValidator() {
+	    return getLocalValidatorFactoryBean();
+	}
+	@Bean(name = "localValidatorFactoryBean")
+	public LocalValidatorFactoryBean getLocalValidatorFactoryBean() {
+		LocalValidatorFactoryBean localValidatorFactoryBean = new LocalValidatorFactoryBean();
+		localValidatorFactoryBean.setValidationMessageSource(getMessageSource());
+		return localValidatorFactoryBean;
+	}
+	@Override
+	public void addViewControllers(ViewControllerRegistry registry) {
+		registry.addViewController("/").setViewName("forward:/home.html");
+	}
+}

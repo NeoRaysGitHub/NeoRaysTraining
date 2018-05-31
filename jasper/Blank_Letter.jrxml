@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_Letter" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c68ac145-2b22-471d-9aa8-88c9b88efdbb">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[IkNIRVNTX1RBQkxFIiBBUyAsMTMyLDg2LDZlYmY2MzkyLTMyMTAtNDgwZC1iMDMwLWU4ZWY2NTg0
+NDYyZjs=]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Oracle"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT "CHESS_TABLE"."NAME",
+	"CHESS_TABLE"."EMAIL",
+	"CHESS_TABLE"."RATING",
+	"CHESS_TABLE"."PHONE"
+FROM "CHESS_TABLE"]]>
+	</queryString>
+	<field name="NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="NAME"/>
+	</field>
+	<field name="EMAIL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="EMAIL"/>
+	</field>
+	<field name="RATING" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="RATING"/>
+	</field>
+	<field name="PHONE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="PHONE"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="80" splitType="Stretch">
+			<rectangle>
+				<reportElement x="20" y="10" width="530" height="50" backcolor="#1732E6" uuid="e81357f4-27c9-4ded-9744-e8ea38104a35"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="233" y="29" width="100" height="30" uuid="25fa9931-0a02-481f-b005-2a894c56268f"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="0" width="100" height="30" uuid="e4ca3114-db7f-46ac-87a4-db555c4c771b"/>
+				<textFieldExpression><![CDATA[$F{NAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
