@@ -1,0 +1,5 @@
+com\neorays\config\WebAppConfiguration.class
+com\neorays\contoller\HomeController.class
+com\neorays\config\AppConfiguration.class
+com\neorays\model\PolicyHolder.class
+com\neorays\model\PolicyInfo.class

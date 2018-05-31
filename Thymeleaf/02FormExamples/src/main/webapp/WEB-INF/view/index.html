@@ -1,0 +1,37 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body bgcolor="0ff00">
+<br/>
+<hr/>
+<img th:attr="src=@{/images/google.png}" th:alt-title="#{img.logo}"  />
+<form action="registerEmployee" th:action="@{registerEmployee}"  th:attr="action=@{registerEmployee}"
+	th:object="${employee}" method="post">
+	<h1 color="yellow" align="center"> Employee Data</h1>
+	<table th:align="center" border="1">
+		<tr>
+			<td th:text="#{label.empNo}">Employee Number</td>
+			<td><input type="text" th:field="*{empNo}" /></td>
+			
+		</tr>
+		<tr>
+			<td th:text="#{label.name}">Emp name</td>
+			<td><input type="text" th:field="*{name}"/></td>
+			 <td><p id="name"> </p></td>
+		</tr>
+		<tr>
+		<td th:text="#{label.age}">Emp age</td>
+			<td><input type="text" th:field="*{age}" /></td>
+		</tr>
+		<tr>
+			<td th:text="#{label.salary}">Emp salary</td>
+			<td><input type="text" th:field="*{salary}" /></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><input type="submit"
+				value="Submit" th:value="#{label.submit}" th:attr="value=#{label.submit}"  /></td>
+		</tr>
+	</table>
+</form> 	
+  <div  th:insert="footer :: copy">&copy; NeoRays software Solution</div>
+  
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+div{
+color: red;
+font-size: 20px;
+
+}
+</style>
+
+</head>
+<body>
+
+<div id="demo">
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>

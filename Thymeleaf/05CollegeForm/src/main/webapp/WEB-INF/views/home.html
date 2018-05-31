@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:text="#{Lable.title}">Title</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<style type="text/css">
+	body{
+	background-color: yellow
+	}
+	</style>
+	
+</head>
+<body bgcolor="yellow">
+<a href="?lang=hi">HINDI</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="?lang=en">ENGLISH</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="?lang=kn">Kannada</a>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-9 col-9">
+			<h1 th:text="#{welcome.msg}">Welcome Message</h1>
+			
+			<form method="post" class="form-horizontal" action="createPolicy" th:object="${policyHolder}" onsubmit="return validate()">
+				<h3 th:text="#{Form.heading}"></h3>
+				
+				<div th:class="${#fields.hasErrors('firstName')} ? 'form-group has-error' :'form-group' ">
+					<label th:text="#{Label.firstName}" class="col-sm-2 control-label"></label>
+					<div class="col-sm-10">
+						<input type="text" th:field="*{firstName}" class="form-control" />
+						<p th:errors="*{firstName}" class="help-block"></p>
+					</div>
+					
+				</div>
+				<div  th:class="${#fields.hasErrors('lastName')} ? 'form-group has-error' :'form-group' ">
+					<label th:text="#{Label.lastName}" class="col-sm-2 control-label"></label>
+					<div class="col-sm-10">
+						<input type="text" th:field="*{lastName}"  class="form-control" />
+						<p th:errors="*{lastName}" class="help-block"></p>
+					</div>
+				</div>
+				<div th:class="${#fields.hasErrors('dob')} ? 'form-group has-error' :'form-group' ">
+					<label th:text="#{Label.dob}" class="col-sm-2 control-label"></label>
+					<div class="col-sm-10">
+						<input type="text" th:field="*{dob}" class="form-control" />
+						<p th:errors="*{dob}" class="help-block"></p>
+					</div>
+				</div>
+				<div th:class="${#fields.hasErrors('gender')} ? 'form-group has-error' :'form-group' ">
+					<label th:text="#{Label.gender}" class="col-sm-2 control-label"></label>
+					<div class="col-sm-10">
+						<label class="radio-inline"> 
+							<input type="radio" th:field="*{gender}" value="M" th:text="#{Label.gender.Male}" />
+						</label> 
+						<label class="radio-inline"> 
+							<input type="radio" th:field="*{gender}" value="F" th:text="#{Label.gender.Female}" />
+						</label>
+						<p th:errors="*{gender}" class="help-block"></p>
+					</div>
+				</div>
+				
+				<div id="phone">
+					<label th:text="#{Label.phone}" class="col-sm-2 control-label"></label>
+					<div class="col-sm-10">
+						<input type="text" th:field="*{firstName}" class="form-control" />
+						<p th:errors="*{firstName}" class="help-block"></p>
+					</div>
+				
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" th:inline="text" class="btn btn-primary">[[#{Label.save}]]</button>
+					</div>
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+	
+	function validate()
+	{
+		
+		document.getElementById("phone").
+		
+	}
+	
+	</script>
+</body>
+</html>
