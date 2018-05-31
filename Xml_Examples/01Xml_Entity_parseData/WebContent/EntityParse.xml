@@ -1,0 +1,11 @@
+<!DOCTYPE courses [
+<!ENTITY cmpy "NeoRays software solutions">
+<!ELEMENT courses (course,company)*>
+<!ELEMENT course (#PCDATA)>
+<!ELEMENT company (#PCDATA)>
+]>
+
+<courses>
+<course>aaa</course>
+<company>&cmpy;</company>
+</courses>
