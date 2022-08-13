@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+/* $(document).ready(function()
+		{
+	$('#b1').css('background-color','yellow').click(function()
+{
+    alert("Button is clicked");
+		}
+			); */
+
+	/* if($('#b2').length>0){
+          alert('Element is found....');
+		}
+	else{
+      alert('Element is not found....');
+		} */
+
+	/* alert($('#b1')[0]); */
+$(document).ready(function(){
+     $('tr:even').css('background-color','red'); 
+    $('tr:odd').css('background-color','green');  
+ /*  alert($('html').html());  */
+
+	/* $('tr').each(function()
+    {
+            alert( $(this).html());
+		    }
+			 ); */
+			 $('#b1').css('background-color','yellow').click(function()
+					 {
+					     alert("Button is clicked");
+					 		});
+	   $('span,a,div').css('background-color','skyblue');
+	   $('.small').css('border','5px solid red');
+	   $('.big').css('border','5px solid green');
+	});
+</script>
+<table border="3">
+<tr>
+<td>one</td>
+<td>two</td>
+<td>three</td>
+</tr>
+<tr>
+<td>four</td>
+<td>five</td>
+<td>six</td>
+</tr>
+<tr>
+<td>seven</td>
+<td>eight</td>
+<td>nine</td>
+</tr>
+<tr>
+<td>ten</td>
+<td>eleven</td>
+<td>twelve</td>
+</tr>
+<tr>
+<td>thertenn</td>
+<td>fourtenn</td>
+<td>fiftenn</td>
+</tr>
+
+</table>
+<div>Div1		<br><br>
+<button id="b1">click of checking id selector</button><br><br>
+<h1>Bharat.....!!!!</h1><br><br>
+<a>www.google.com</a>
+</div><br><br>
+<span class="small">India span tag</span><br><br>
+<span class="big">Morality  of  iT...!!!!!!!</span>
+<p class="big">This is good para to learn....</p>
+</body>
+</html>

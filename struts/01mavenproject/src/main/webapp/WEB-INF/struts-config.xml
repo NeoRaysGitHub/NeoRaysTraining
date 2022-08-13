@@ -1,0 +1,19 @@
+<struts-config>
+
+	<form-beans>
+		<form-bean name="studentForm" type="com.cluster.form.StudentForm"/>
+	</form-beans>
+	
+	 <global-exceptions>
+        <exception key="red" type="java.lang.ArithmeticException" path="/jsp/red.jsp"/>
+    </global-exceptions>
+	
+	<action-mappings> 
+		<action path="/login" type="com.cluster.action.ShowPhoneAction" name="studentForm"> 
+        	<exception key="errors.search.phone.noresults" type="com.cluster.exception.PhoneNumberNotFoundException" path="/jsp/showPhoneNumber.jsp"/> 	
+        </action>
+	</action-mappings> 
+	
+	 <message-resource parameter="resources.myapp.ApplicationResources"/>
+	 
+</struts-config> 

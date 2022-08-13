@@ -1,0 +1,55 @@
+<html>
+<head>
+<script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+<script src="https://unpkg.com/react/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+<div id='root'/>
+<script type="text/babel">
+
+class AddNewTask extends React.Component{
+       render(){
+             var item=this.props.title
+         return(
+              <div>
+              <form>
+              <input type="text"/>
+              <input type="submit"/>
+              </form>
+              </div>
+         );
+       }
+}
+class Applist extends React.Component{
+       render(){
+         return(
+           <div>
+              <ul>
+              <li>Task 1</li>
+              <li>Task 2</li>
+              <li>Task 3</li>
+              <li>Task 4</li>
+              </ul>
+              <AddNewTask/>
+               </div>
+         );
+       }
+}
+/*class Task extends React.Component{
+  render(){
+
+    return(
+      <div>
+      <AddNewTask />
+      <Applist />
+      </div>
+    );
+  }
+}*/
+
+ReactDOM.render(<div><Applist/></div>,document.getElementById('root'));
+</script>
+</head>
+<body>
+  <div id='root'></div>
+</body>
+</html>

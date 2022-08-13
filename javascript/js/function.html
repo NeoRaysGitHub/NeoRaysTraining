@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="demo"></p>
+<p id="p1"></p>
+<script type="text/javascript">
+var myfuntion=new Function("a","b","return a*b ")
+document.getElementById("demo").innerHTML=myfuntion(4,3);
+
+(function(){
+	document.getElementById("p1").innerHTML="All indians Are my brothers and sisters"
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body bgcolor="lightgreen">
+<script type="text/javascript">
+/* $(document).ready(function()
+          { 
+          $('div:even[title]').css('border' ,'5px solid skyblue');
+           $('div:odd[title]').css('border' ,'5px solid yellow'); 
+               $('div[title]').filter(function(){
+                     return $(this).attr('title').toLowerCase=='divtitle';
+                   }).css('border','3px solid red');          
+             }); */            
+/* $(document).ready(function(){
+    $('div:even').css('background-color','blue'); 
+   $('div:odd').css('background-color','green'); 
+}); */
+
+/*$(document).ready(function () {
+        $('div[title]').filter(function () {
+        return $(this).attr('title').toLowerCase() == 'divtitle';
+    }).css('border', '3px solid red');
+});  */
+/* $(document).ready(function () {    
+	$('div[title*= "Div"]').css('border','3px solid red'); 
+    });  */
+    $(document).ready(function () {    
+    	$('div[title]').filter(function(){
+             /* return (/Div/i).test($(this).attr('title')); */
+              return RegExp('Div','i').test($(this).attr('title'));
+                   }).css('border','3px solid red'); 
+        });
+
+        /* $(document).ready(function () {
+            $('div[title]').filter(function () {
+                return (/Div/i).test($(this).attr('title'));
+            }).css('border', '3px solid red');
+        });  */
+    
+</script>
+<div title="DivTitle">DIV1</div><br><br>
+<div title="DIVTITLE">DIV2</div><br><br>
+<div title="divtitle">DIV3</div>
+</body>
+</html>

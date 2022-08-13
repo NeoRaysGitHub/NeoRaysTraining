@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function validate() {
+	var x="";
+	if(document.getElementById("numb").validity.rangeUnderflow){
+      x="Number is Too short";
+		}
+	else{
+   x="Input is OK";
+		}
+   document.getElementById("demo").innerHTML=x;	
+}
+</script>
+</head>
+<body>
+<h1>Under Flow</h1>
+<input type="number"  id="numb" min="200"/>
+<button onclick="validate()">OK</button>
+<h1>Click the button after entering the number.....</h1>
+<p id="demo"></p>
+</body>
+</html>

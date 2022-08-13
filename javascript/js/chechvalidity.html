@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function validate() {
+	var x=document.getElementById("numb");
+	if(!x.checkValidity)
+		document.getElementById("demo").innerHTML=x.validationMessage;
+	else
+		document.getElementById("demo").innerHTML="Input is Ok";
+}
+
+</script>
+</head>
+<body>
+<form>
+<h1>Enter the Number between 100 to 300...</h1>
+<p id="demo"></p>
+<input id="numb"  type="number" max="300" min="100" required>
+
+<input type="button" onclick="validate()"></button>
+</form>
+</body>
+</html>

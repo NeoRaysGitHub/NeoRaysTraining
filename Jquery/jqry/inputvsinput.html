@@ -1,0 +1,50 @@
+<html>
+<head>
+<title></title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+<script type="text/javascript">
+
+     $(document).ready(function(){
+          $(':input').each(function(){
+               alert($(this).val());
+          });
+     });
+
+</script>
+</head>
+<body style="font-family: Arial">
+	First Name :
+	<input type="text" value="Bharat">
+	<br>
+	<br> Last Name :
+	<input type="text" value="Ahirwar">
+	<br>
+	<br> Gender :
+	<input type="radio" name="gender" checked="checked" value="Male">Male
+	<input type="radio" name="gender" value="Female">Female
+	<br>
+	<br> Skills :
+	<input type="checkbox" name="skills" checked="checked"
+		value="JavaScript">JavaScript
+	<input type="checkbox" name="skills" checked="checked" value="jQuery">jQuery
+	<input type="checkbox" name="skills" value="C#">C#
+	<br>
+	<br> Country:
+	<select >
+
+		<option  value="USA">USA</option>
+		<option selected="selected" value="India">India</option>
+		<option value="UK">UK</option>
+	</select>
+	<br>
+	<br> Summary :
+	<br>
+	<textarea >Hi , I am Bharat Kumar Ahirwar Java Developer from 
+	Bamgalore.Today Is little bit heat in environment</textarea>
+	<br>
+	<br>
+	
+	<input type="submit" value="submit">
+</body>
+</html>

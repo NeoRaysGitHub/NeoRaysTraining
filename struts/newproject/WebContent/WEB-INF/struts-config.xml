@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "struts-config_1_2.dtd">
+<struts-config>
+
+	<form-beans>
+		<form-bean name="phoneForm" type="com.cluster.form.PhoneForm"/>
+	</form-beans>
+	
+	<action-mappings> 
+		<action path="/searchbyphone" type="com.cluster.action.PhoneAction" name="phoneForm" 
+			 validate="true" input="/jsp/searchByPhone.jsp">
+			<exception key="errors.search.phone.noresults" type="com.cluster.exception.UserNotFoundException" 
+				path="/jsp/searchByPhone.jsp"/>
+            <forward name="byphone" path="/jsp/searchByPhone.jsp"/>
+		</action>
+	</action-mappings> 
+	<message-resources parameter="myapp.ApplicationResources"/>
+	 
+</struts-config> 

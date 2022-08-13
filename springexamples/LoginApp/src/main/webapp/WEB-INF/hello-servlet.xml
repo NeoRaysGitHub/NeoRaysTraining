@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Handler mapping -->
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/login.htm">wc</prop>
+					<prop key="/select.htm">select</prop>
+					<prop key="/delete.htm">delete</prop>
+					  <prop key="/update.htm">update</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- Controller class -->
+	<bean id="wc" class="com.neorays.controller.LoginController">
+		<property name="service" ref="ser" />
+	</bean>
+		<bean id="select" class="com.neorays.controller.SelectController">
+		<property name="service" ref="ser" />
+	</bean>
+<bean id="delete" class="com.neorays.controller.DeleteController">
+		<property name="service" ref="ser" />
+	</bean>
+	<bean id="update" class="com.neorays.controller.UpdateController">
+		<property name="service" ref="ser" />
+	</bean>
+	<!-- Service class -->
+	<bean id="ser" class="com.neorays.service.LoginService">
+		<property name="dao" ref="data" />
+	</bean>
+	
+	<!-- dao class cnfgs -->
+	<bean id="data" class="com.neorays.dao.LoginDAO">
+	</bean>
+	
+	
+	<!-- View Resolver -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 
+		<property name="prefix" value="/WEB-INF/pages/"/>
+		 <property name="suffix" 	value=".jsp"/> </bean>
+
+</beans>

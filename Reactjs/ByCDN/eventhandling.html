@@ -1,0 +1,45 @@
+<html>
+<head>
+  <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+  <script src="https://unpkg.com/react/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+<script type="text/babel">
+class Test extends React.Component{
+constructor(props){
+  super(props);
+  this.state={name:"Vikas...!!!!",counter:0};
+
+  this.clickHandler=this.clickHandler.bind(this);
+  this.clickHandlerDecrease=this.clickHandlerDecrease.bind(this);
+}
+   clickHandler(){
+    this.setState({counter:this.state.counter+1});
+    this.setState({name:'Bharat'});
+}
+  clickHandlerDecrease(){
+   this.setState({counter:this.state.counter-1});
+   this.setState({name:'Vikas'});
+ }
+  render(){
+
+    return(
+      <div>
+      <div><button onClick={this.clickHandler}>UPDATE_0</button></div>
+
+      <div><button onClick={this.clickHandlerDecrease}>UPDATE_1</button></div>
+      <div></div>
+      <div><button onClick={this.clickHandler}>UPDATE_2</button></div>
+         <div><h1>{this.state.name}</h1></div>
+
+      <h1>{this.state.counter}</h1>
+      </div>
+    );
+  }
+}
+ReactDOM.render(<div><Test/></div>,document.getElementById('root'));
+</script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>

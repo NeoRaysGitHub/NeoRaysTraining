@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<p>Creating a JavaScript Object.</p>
+
+	<p id="demo"></p>
+
+	<script>
+var person = {
+    firstName : "John",
+    lastName  : "Doe",
+    age       : 50,
+    eyeColor  : "blue",
+    	 fullName : function() {
+    	       return  this.firstName + " " + this.lastName;
+    	    }
+};
+
+document.getElementById("demo").innerHTML =  person.fullName();
+//person.nationality="indian";
+  /*  document.getElementById("demo").innerHTML =
+person.firstName + " " + person.lastName+" "+person.nationality; */
+ 
+  /* delete person.age; */
+
+  /* delete document.getElementById("demo").innerHTML;
+   var text='''';
+  var x;
+  for(x in person){
+  text+=person[x]+"  ";	
+  }
+  document.getElementById("demo").innerHTML=text;  */
+
+ 
+ 
+/* document.getElementById("demo").innerHTML =
+	person["firstName"] + " " + person["lastName"]; */
+
+	</script> 
+
+</body>
+</html>

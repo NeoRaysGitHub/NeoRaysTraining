@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+	<script type="text/javascript">
+   /*  $(document).ready(function(){
+    	$('li').each(function(){
+    	 $('li').each(function(index){ 
+         $('li').each(function(index,element){ 
+          alert(index+"    "+$(element).text()); 
+         if($(this).text()=='USA'){
+               return false;
+                }
+        	 alert($(this).text()); 
+        	  $(this).css('color','red');
+          $('li').css('color','green');
+        	$('#d1').css('color','red').html($('#d1').html()+"<br>"+$(this).text());
+        	 
+             });
+        }); */
+
+        $(document).ready(function(){
+                     /* $('li').css('color','blue').slideUp(1000).slideDown(1000).attr('title','MY TITLE'); */
+                   /*   $('li').css('color','blue')
+                         .slideUp(1000)
+                              .slideDown(1000)
+                                    .attr('title','MY TITLE');  */
+                $('#slideUp').css('background-color','skyblue').click(function(){
+                         $('li').slideUp(1000); 
+                      });
+                       $('li').attr('title','MY TITLE');
+                     $('#slideDown').css('background-color','pink').click(function(){
+                         $('li').slideDown(1000); 
+                      }); 
+              });
+      /*   
+        $(document).ready(function(){
+             $('#slideUp').click(function(){
+               $('li').slideUp(1000); 
+            });
+         });
+        $(document).ready(function(){
+            $('#slideDown').click(function(){
+              $('li').slideDown(1000); 
+           });
+        });     */
+  </script>
+</head>
+<body style="font-family: Arial">
+List : <br>
+<ul>
+<li>IND</li>
+<li>USA</li>
+<li>USA</li>
+<li>UK</li>
+<li>BRA</li>
+<li>ITL</li>
+<li>PRS</li>
+<li>ROM</li>
+<li>ARG</li>
+</ul>
+<button id="slideUp">SlideUp</button>
+<button id="slideDown">SlideDown</button>
+<div id="d1"></div>
+</body>
+</html>

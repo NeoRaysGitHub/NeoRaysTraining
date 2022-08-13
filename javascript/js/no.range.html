@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+function validate() {
+	var x=document.getElementById("numb").value;
+	if(isNaN(x)||x<0 ||x>10)
+		alert("Number is not between 1 to 10");
+	else{
+		alert("Input is OK");
+	document.getElementById("demo").innerHTML=x;
+	}
+}
+
+</script>
+
+<body bgcolor="black">
+<form action="">
+<h1>Enter the value between 1 to 10</h1>
+<input id="numb" required/>
+<input type="button"  onclick="validate()" value="sub"/>
+<p id="demo"></p>
+</form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+  <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+  <script src="https://unpkg.com/react/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+  <script type="text/babel">
+  class App extends React.Component {
+   constructor(props) {
+      super(props);
+
+      this.state = {
+         data: null
+      }
+      this.updateState = this.updateState.bind(this);
+   };
+   updateState(e) {
+      this.setState({data: e.target.value});
+   }
+   render() {
+      return (
+         <div>
+            <input type = "text" value = {this.state.data}
+               onChange = {this.updateState} />
+            <h4>{this.state.data}</h4>
+         </div>
+      );
+   }
+}
+ ReactDOM.render(<App/>,document.getElementById('root'));
+  </script>
+</head>
+<div id="root"></div>
+<body>
+</body>
+</html>
